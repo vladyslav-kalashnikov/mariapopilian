@@ -49,7 +49,7 @@ function loadEnvFile(filename) {
 loadEnvFile(".env");
 loadEnvFile(".env.local");
 
-const HOST = process.env.HOST ?? "127.0.0.1";
+const HOST = process.env.HOST ?? (process.env.RENDER ? "0.0.0.0" : "127.0.0.1");
 const PORT = Number(process.env.PORT ?? "3001");
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12;
 const DEFAULT_ADMIN_PASSWORD = "change-me-please";

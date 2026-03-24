@@ -15,6 +15,11 @@ type StatusState = {
   text: string;
 } | null;
 
+type UploadedAsset = {
+  file: File;
+  imageUrl: string;
+};
+
 const inputClassName =
   "w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition focus:border-[#B39A74]/50";
 const textareaClassName =
@@ -44,7 +49,18 @@ function makeId(prefix: string) {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
     return `${prefix}-${crypto.randomUUID()}`;
   }
-  return `${prefix}-${Date.now()}`;
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function fileNameToTitle(fileName: string) {
+  const baseName = fileName.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").trim();
+  const normalized = baseName.replace(/\s+/g, " ");
+
+  if (!normalized) {
+    return "Новий елемент";
+  }
+
+  return normalized.replace(/\b\p{L}/gu, (letter) => letter.toUpperCase());
 }
 
 async function uploadImage(authToken: string, file: File) {
@@ -99,11 +115,15 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 function UploadButton({
   label,
   disabled,
+  multiple,
   onFile,
+  onFiles,
 }: {
   label: string;
   disabled?: boolean;
-  onFile: (file: File) => void;
+  multiple?: boolean;
+  onFile?: (file: File) => void;
+  onFiles?: (files: File[]) => void;
 }) {
   return (
     <label className={`${subtleButtonClassName} ${disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}>
@@ -114,10 +134,18 @@ function UploadButton({
         accept="image/*"
         className="hidden"
         disabled={disabled}
+        multiple={multiple}
         onChange={(event) => {
-          const file = event.target.files?.[0];
-          if (file) {
-            onFile(file);
+          const files = Array.from(event.target.files ?? []);
+          if (!files.length) {
+            event.currentTarget.value = "";
+            return;
+          }
+
+          if (multiple) {
+            onFiles?.(files);
+          } else {
+            onFile?.(files[0]);
           }
           event.currentTarget.value = "";
         }}
@@ -196,6 +224,12 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
   const [status, setStatus] = useState<StatusState>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [uploadingKey, setUploadingKey] = useState<string | null>(null);
+  const [portfolioBatchCategory, setPortfolioBatchCategory] = useState(
+    () => content.portfolio.items[content.portfolio.items.length - 1]?.category || "Фотосесії",
+  );
+  const [reelsBatchDuration, setReelsBatchDuration] = useState(
+    () => content.reels.items[content.reels.items.length - 1]?.duration || "0:30",
+  );
 
   useEffect(() => {
     setDraft(cloneSiteContent(content));
@@ -258,6 +292,46 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
       setStatus({
         tone: "error",
         text: error instanceof Error ? error.message : "Не вдалося завантажити зображення.",
+      });
+    } finally {
+      setUploadingKey(null);
+    }
+  }
+
+  async function handleBatchImageUpload(
+    files: File[],
+    key: string,
+    onUploaded: (assets: UploadedAsset[]) => void,
+    label: string,
+  ) {
+    if (!files.length) {
+      return;
+    }
+
+    setUploadingKey(key);
+
+    try {
+      const uploadedAssets: UploadedAsset[] = [];
+
+      for (const [index, file] of files.entries()) {
+        setStatus({
+          tone: "idle",
+          text: `Завантажую ${label.toLowerCase()} ${index + 1} з ${files.length}...`,
+        });
+
+        const imageUrl = await uploadImage(authToken, file);
+        uploadedAssets.push({ file, imageUrl });
+      }
+
+      onUploaded(uploadedAssets);
+      setStatus({
+        tone: "success",
+        text: `Завантажено ${uploadedAssets.length} ${label.toLowerCase()}. Натисніть «Зберегти контент», щоб опублікувати.`,
+      });
+    } catch (error) {
+      setStatus({
+        tone: "error",
+        text: error instanceof Error ? error.message : "Не вдалося завантажити файли.",
       });
     } finally {
       setUploadingKey(null);
@@ -620,21 +694,58 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
       </SectionCard>
 
       <SectionCard title="Portfolio Gallery" description="Тут можна додавати нові фото в галерею, міняти категорії та назви.">
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(220px,280px)]">
           <Field label="Title line">
             <input value={draft.portfolio.titleLine1} onChange={(event) => mutateDraft((next) => { next.portfolio.titleLine1 = event.target.value; })} className={inputClassName} />
           </Field>
           <Field label="Accent">
             <input value={draft.portfolio.titleAccent} onChange={(event) => mutateDraft((next) => { next.portfolio.titleAccent = event.target.value; })} className={inputClassName} />
           </Field>
+          <Field label="Категорія для пачки фото">
+            <input value={portfolioBatchCategory} onChange={(event) => setPortfolioBatchCategory(event.target.value)} placeholder="Наприклад: Фотосесії" className={inputClassName} />
+          </Field>
         </div>
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <p className="text-[0.58rem] uppercase tracking-[0.28em] text-white/40">Gallery items</p>
-            <button type="button" onClick={() => mutateDraft((next) => { next.portfolio.items.push({ id: makeId("portfolio"), imageUrl: "", altText: "", category: "Нова категорія", title: "Нове фото" }); })} className={subtleButtonClassName}>
-              <Plus className="h-4 w-4" />
-              Додати фото
-            </button>
+          <div className="rounded-[1.25rem] border border-white/10 bg-white/[0.02] p-4">
+            <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+              <div>
+                <p className="text-[0.58rem] uppercase tracking-[0.28em] text-white/40">Gallery items</p>
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-white/45">
+                  Можна вибрати одразу багато файлів. Для кожного фото автоматично створиться окрема картка в галереї.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <UploadButton
+                  label={uploadingKey === "portfolio-bulk" ? "Завантаження..." : "Додати пачкою"}
+                  multiple
+                  disabled={uploadingKey !== null}
+                  onFiles={(files) =>
+                    void handleBatchImageUpload(files, "portfolio-bulk", (assets) => {
+                      mutateDraft((next) => {
+                        const category = portfolioBatchCategory.trim() || next.portfolio.items[next.portfolio.items.length - 1]?.category || "Фотосесії";
+
+                        next.portfolio.items.push(
+                          ...assets.map(({ file, imageUrl }) => {
+                            const title = fileNameToTitle(file.name);
+                            return {
+                              id: makeId("portfolio"),
+                              imageUrl,
+                              altText: title,
+                              category,
+                              title,
+                            };
+                          }),
+                        );
+                      });
+                    }, "фото")
+                  }
+                />
+                <button type="button" onClick={() => mutateDraft((next) => { next.portfolio.items.push({ id: makeId("portfolio"), imageUrl: "", altText: "", category: portfolioBatchCategory.trim() || "Нова категорія", title: "Нове фото" }); })} className={subtleButtonClassName}>
+                  <Plus className="h-4 w-4" />
+                  Додати фото
+                </button>
+              </div>
+            </div>
           </div>
           {draft.portfolio.items.map((item, index) => (
             <div key={item.id || index} className="space-y-3 rounded-2xl border border-white/10 p-4">
@@ -678,13 +789,50 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
             <input value={draft.reels.moreUrl} onChange={(event) => mutateDraft((next) => { next.reels.moreUrl = event.target.value; })} className={inputClassName} />
           </Field>
         </div>
+        <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(220px,280px)]">
+          <div className="rounded-[1.25rem] border border-white/10 bg-white/[0.02] p-4 text-sm leading-7 text-white/45">
+            Обкладинки reels тепер теж можна заливати пачкою. Назва автоматично візьметься з назви файлу, а тривалість підставиться з поля праворуч.
+          </div>
+          <Field label="Тривалість для пачки reels">
+            <input value={reelsBatchDuration} onChange={(event) => setReelsBatchDuration(event.target.value)} placeholder="0:30" className={inputClassName} />
+          </Field>
+        </div>
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <p className="text-[0.58rem] uppercase tracking-[0.28em] text-white/40">Reel items</p>
-            <button type="button" onClick={() => mutateDraft((next) => { next.reels.items.push({ id: makeId("reel"), imageUrl: "", altText: "", title: "Новий reel", duration: "0:30" }); })} className={subtleButtonClassName}>
-              <Plus className="h-4 w-4" />
-              Додати reel
-            </button>
+          <div className="rounded-[1.25rem] border border-white/10 bg-white/[0.02] p-4">
+            <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+              <p className="text-[0.58rem] uppercase tracking-[0.28em] text-white/40">Reel items</p>
+              <div className="flex flex-wrap gap-3">
+                <UploadButton
+                  label={uploadingKey === "reels-bulk" ? "Завантаження..." : "Додати пачкою"}
+                  multiple
+                  disabled={uploadingKey !== null}
+                  onFiles={(files) =>
+                    void handleBatchImageUpload(files, "reels-bulk", (assets) => {
+                      mutateDraft((next) => {
+                        const duration = reelsBatchDuration.trim() || next.reels.items[next.reels.items.length - 1]?.duration || "0:30";
+
+                        next.reels.items.push(
+                          ...assets.map(({ file, imageUrl }) => {
+                            const title = fileNameToTitle(file.name);
+                            return {
+                              id: makeId("reel"),
+                              imageUrl,
+                              altText: title,
+                              title,
+                              duration,
+                            };
+                          }),
+                        );
+                      });
+                    }, "обкладинок")
+                  }
+                />
+                <button type="button" onClick={() => mutateDraft((next) => { next.reels.items.push({ id: makeId("reel"), imageUrl: "", altText: "", title: "Новий reel", duration: reelsBatchDuration.trim() || "0:30" }); })} className={subtleButtonClassName}>
+                  <Plus className="h-4 w-4" />
+                  Додати reel
+                </button>
+              </div>
+            </div>
           </div>
           {draft.reels.items.map((item, index) => (
             <div key={item.id || index} className="space-y-3 rounded-2xl border border-white/10 p-4">
