@@ -7,6 +7,7 @@ const storageDir = path.join(workspaceRoot, "storage");
 const uploadsDir = path.join(storageDir, "uploads");
 const databasePath = path.join(storageDir, "cms.sqlite");
 const manifestPath = path.join(workspaceRoot, "src", "content", "photoManifest.json");
+const siteContentPath = path.join(workspaceRoot, "src", "content", "defaultSiteContent.json");
 
 function ensureStorage() {
   fs.mkdirSync(uploadsDir, { recursive: true });
@@ -14,6 +15,11 @@ function ensureStorage() {
 
 function loadManifest() {
   const raw = fs.readFileSync(manifestPath, "utf8");
+  return JSON.parse(raw);
+}
+
+function loadDefaultSiteContent() {
+  const raw = fs.readFileSync(siteContentPath, "utf8");
   return JSON.parse(raw);
 }
 
@@ -34,6 +40,13 @@ function createDatabase() {
       alt_text TEXT NOT NULL,
       image_url TEXT NOT NULL,
       sort_order INTEGER NOT NULL,
+      created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE TABLE IF NOT EXISTS content_documents (
+      doc_key TEXT PRIMARY KEY,
+      json_value TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
       updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
@@ -110,6 +123,22 @@ function createDatabase() {
     });
   }
 
+  const defaultSiteContent = loadDefaultSiteContent();
+  const insertDocument = db.prepare(`
+    INSERT OR IGNORE INTO content_documents (
+      doc_key,
+      json_value
+    ) VALUES (
+      $docKey,
+      $jsonValue
+    );
+  `);
+
+  insertDocument.run({
+    docKey: "site_content",
+    jsonValue: JSON.stringify(defaultSiteContent),
+  });
+
   return db;
 }
 
@@ -160,6 +189,30 @@ const updateStatement = db.prepare(`
   WHERE slot_id = $slotId;
 `);
 
+const selectContentStatement = db.prepare(`
+  SELECT
+    doc_key AS docKey,
+    json_value AS jsonValue,
+    updated_at AS updatedAt
+  FROM content_documents
+  WHERE doc_key = ?;
+`);
+
+const upsertContentStatement = db.prepare(`
+  INSERT INTO content_documents (
+    doc_key,
+    json_value,
+    updated_at
+  ) VALUES (
+    $docKey,
+    $jsonValue,
+    CURRENT_TIMESTAMP
+  )
+  ON CONFLICT(doc_key) DO UPDATE SET
+    json_value = excluded.json_value,
+    updated_at = CURRENT_TIMESTAMP;
+`);
+
 export function listPhotoSlots() {
   return selectAllStatement.all();
 }
@@ -181,6 +234,28 @@ export function updatePhotoSlot(slotId, patch) {
   });
 
   return getPhotoSlot(slotId);
+}
+
+export function getContentDocument(docKey) {
+  const row = selectContentStatement.get(docKey);
+  if (!row) {
+    return null;
+  }
+
+  return {
+    docKey: row.docKey,
+    value: JSON.parse(row.jsonValue),
+    updatedAt: row.updatedAt,
+  };
+}
+
+export function updateContentDocument(docKey, value) {
+  upsertContentStatement.run({
+    docKey,
+    jsonValue: JSON.stringify(value),
+  });
+
+  return getContentDocument(docKey);
 }
 
 export function getUploadsDirectory() {

@@ -17,6 +17,7 @@ import img6 from "@/images/6.png";
 import img7 from "@/images/7.png";
 import img8 from "@/images/8.png";
 import img9 from "@/images/9.png";
+import { defaultSiteContent, mergeSiteContent, type SiteContent } from "@/content/siteContent";
 
 export type PhotoSlotManifestItem = {
   slotId: string;
@@ -39,9 +40,17 @@ export type PhotoSlot = PhotoSlotManifestItem & {
 type SiteContentContextValue = {
   items: PhotoSlot[];
   photos: Record<string, PhotoSlot>;
+  content: SiteContent;
+  contentUpdatedAt: string | null;
   loading: boolean;
   error: string | null;
   refresh: () => Promise<void>;
+};
+
+type PublicSitePayload = {
+  items?: PhotoSlot[];
+  content?: unknown;
+  contentUpdatedAt?: string | null;
 };
 
 const photoManifest = manifestData as PhotoSlotManifestItem[];
@@ -87,29 +96,34 @@ function mergeItems(nextItems: PhotoSlot[]) {
 
 const SiteContentContext = createContext<SiteContentContextValue | null>(null);
 
-async function fetchPhotoSlots() {
-  const response = await fetch("/api/public/photo-slots");
+async function fetchSiteContent() {
+  const response = await fetch("/api/public/site-content");
   if (!response.ok) {
     throw new Error("Не вдалося завантажити контент із сервера.");
   }
 
-  const payload = (await response.json()) as { items?: PhotoSlot[] };
-  return Array.isArray(payload.items) ? payload.items : [];
+  return (await response.json()) as PublicSitePayload;
 }
 
 export function SiteContentProvider({ children }: PropsWithChildren) {
   const [items, setItems] = useState<PhotoSlot[]>(fallbackItems);
+  const [content, setContent] = useState<SiteContent>(defaultSiteContent);
+  const [contentUpdatedAt, setContentUpdatedAt] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
     setLoading(true);
     try {
-      const nextItems = await fetchPhotoSlots();
-      setItems(mergeItems(nextItems));
+      const payload = await fetchSiteContent();
+      setItems(mergeItems(Array.isArray(payload.items) ? payload.items : []));
+      setContent(mergeSiteContent(payload.content));
+      setContentUpdatedAt(payload.contentUpdatedAt ?? null);
       setError(null);
     } catch (err) {
       setItems(fallbackItems);
+      setContent(defaultSiteContent);
+      setContentUpdatedAt(null);
       setError(err instanceof Error ? err.message : "Не вдалося оновити контент.");
     } finally {
       setLoading(false);
@@ -124,11 +138,13 @@ export function SiteContentProvider({ children }: PropsWithChildren) {
     () => ({
       items,
       photos: toPhotoMap(items),
+      content,
+      contentUpdatedAt,
       loading,
       error,
       refresh,
     }),
-    [error, items, loading, refresh],
+    [content, contentUpdatedAt, error, items, loading, refresh],
   );
 
   return <SiteContentContext.Provider value={value}>{children}</SiteContentContext.Provider>;

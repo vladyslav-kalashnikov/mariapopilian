@@ -5,10 +5,12 @@ import http from "node:http";
 import { Readable } from "node:stream";
 
 import {
+  getContentDocument,
   getPhotoSlot,
   getUploadsDirectory,
   getWorkspaceRoot,
   listPhotoSlots,
+  updateContentDocument,
   updatePhotoSlot,
 } from "./database.mjs";
 
@@ -247,6 +249,15 @@ function handleListPhotoSlots(res) {
   sendJson(res, 200, { items: listPhotoSlots() });
 }
 
+function handlePublicSiteContent(res) {
+  const document = getContentDocument("site_content");
+  sendJson(res, 200, {
+    items: listPhotoSlots(),
+    content: document?.value ?? null,
+    contentUpdatedAt: document?.updatedAt ?? null,
+  });
+}
+
 async function handleUpdatePhotoSlot(req, res, slotId) {
   const token = requireAdmin(req, res);
   if (!token) {
@@ -326,6 +337,65 @@ async function handleUpload(req, res, slotId) {
   }
 }
 
+async function handleUpdateSiteContent(req, res) {
+  const token = requireAdmin(req, res);
+  if (!token) {
+    return;
+  }
+
+  try {
+    const body = await readJson(req);
+    if (!body || typeof body !== "object" || !("value" in body) || typeof body.value !== "object" || body.value === null) {
+      sendJson(res, 400, { error: "Потрібно передати коректний content document." });
+      return;
+    }
+
+    const updated = updateContentDocument("site_content", body.value);
+    sessions.set(token, Date.now() + SESSION_TTL_MS);
+    sendJson(res, 200, {
+      content: updated?.value ?? null,
+      contentUpdatedAt: updated?.updatedAt ?? null,
+    });
+  } catch {
+    sendJson(res, 400, { error: "Не вдалося зберегти контент." });
+  }
+}
+
+async function handleGenericUpload(req, res) {
+  const token = requireAdmin(req, res);
+  if (!token) {
+    return;
+  }
+
+  try {
+    const formData = await readFormData(req);
+    const file = formData.get("file");
+
+    if (!(file instanceof File)) {
+      sendJson(res, 400, { error: "Потрібно додати файл." });
+      return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+      sendJson(res, 400, { error: "Можна завантажувати лише зображення." });
+      return;
+    }
+
+    const fileBuffer = Buffer.from(await file.arrayBuffer());
+    const filename = sanitizeFilename(file.name);
+    const targetPath = path.join(uploadsDir, filename);
+    fs.writeFileSync(targetPath, fileBuffer);
+
+    sessions.set(token, Date.now() + SESSION_TTL_MS);
+    sendJson(res, 200, {
+      imageUrl: `/uploads/${filename}`,
+      filename,
+    });
+  } catch {
+    sendJson(res, 400, { error: "Не вдалося завантажити файл." });
+  }
+}
+
 function serveFrontend(res, requestedPathname) {
   const indexPath = path.join(distDir, "index.html");
   const assetPath = safeJoin(distDir, requestedPathname);
@@ -357,6 +427,11 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (pathname === "/api/public/site-content" && method === "GET") {
+    handlePublicSiteContent(res);
+    return;
+  }
+
   if (pathname === "/api/admin/login" && method === "POST") {
     await handleLogin(req, res);
     return;
@@ -369,6 +444,16 @@ const server = http.createServer(async (req, res) => {
 
   if (pathname === "/api/admin/session" && method === "GET") {
     handleSession(req, res);
+    return;
+  }
+
+  if (pathname === "/api/admin/site-content" && method === "PUT") {
+    await handleUpdateSiteContent(req, res);
+    return;
+  }
+
+  if (pathname === "/api/admin/uploads" && method === "POST") {
+    await handleGenericUpload(req, res);
     return;
   }
 

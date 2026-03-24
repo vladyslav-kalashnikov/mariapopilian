@@ -1,0 +1,340 @@
+{
+  "navigation": {
+    "logoPrimary": "M",
+    "logoAccent": "P",
+    "links": [
+      { "id": "home", "label": "Home" },
+      { "id": "portfolio", "label": "Portfolio" },
+      { "id": "about", "label": "About" },
+      { "id": "press", "label": "Press & Media" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "socialLinks": [
+      { "id": "instagram", "label": "Instagram", "url": "https://instagram.com" },
+      { "id": "facebook", "label": "Facebook", "url": "https://facebook.com" },
+      { "id": "location", "label": "Location", "url": "#" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 MARIA POPILIAN",
+    "ctaLabel": "WORK WITH ME",
+    "cmsLabel": "CMS"
+  },
+  "hero": {
+    "badge": "Красуня України 2026",
+    "firstName": "MARIA",
+    "lastName": "POPILIAN",
+    "roles": ["PERSONAL BRAND", "MODEL", "CHOREOGRAPHER"],
+    "ctaLabel": "DISCOVER",
+    "highlights": [
+      { "label": "Editorial Presence", "value": "Premium visual direction" },
+      { "label": "Live CMS", "value": "Фото можна міняти через /admin" },
+      { "label": "Ready for Brands", "value": "Portfolio, reels, press" }
+    ]
+  },
+  "about": {
+    "watermark": "IDENTITY",
+    "eyebrow": "Хто вона",
+    "headlineLines": ["Естетика.", "Вплив.", "Присутність."],
+    "paragraphs": [
+      "Сучасна королева краси, модель та сильний особистий бренд з витонченою візуальною ідентичністю. Її стиль — це преміальна естетика.",
+      "Образ Марії поєднує жіночність, дисципліну та високі амбіції, створюючи позиціонування, яке ідеально підходить для масштабних проєктів."
+    ],
+    "stats": [
+      { "value": "2026", "label": "ТИТУЛ" },
+      { "value": "15+", "label": "ПРОЄКТІВ" },
+      { "value": "10K", "label": "АУДИТОРІЯ" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Експертиза",
+    "titleLine1": "Напрямки",
+    "titleAccent": "Співпраці",
+    "description": "Від подіуму до режисури — комплексний професійний підхід до кожного проєкту у сфері fashion та beauty індустрії.",
+    "items": [
+      {
+        "num": "01",
+        "title": "Fashion Modeling",
+        "desc": "Участь у рекламних кампаніях, лукбуках та editorial-зйомках для преміум брендів."
+      },
+      {
+        "num": "02",
+        "title": "Runway Shows",
+        "desc": "Професійне дефіле для тижнів моди та ексклюзивних показів дизайнерів."
+      },
+      {
+        "num": "03",
+        "title": "Choreography",
+        "desc": "Постановка дефіле, режисура показів та майстер-класи з професійного позування."
+      },
+      {
+        "num": "04",
+        "title": "Ambassadorship",
+        "desc": "Представництво брендів, інтеграції та створення іміджевого контенту."
+      }
+    ]
+  },
+  "personalBrand": {
+    "watermark": "PHILOSOPHY",
+    "eyebrow": "Позиціонування",
+    "titleMain": "Цінності &",
+    "titleAccent": "Візія",
+    "values": [
+      {
+        "num": "01",
+        "title": "Впевненість",
+        "description": "Сильна присутність, побудована на елегантності, вірі в себе та незабутньому візуальному образі."
+      },
+      {
+        "num": "02",
+        "title": "Елегантність",
+        "description": "Витончений стиль, професійна преміальна естетика та увага до кожної деталі образу."
+      },
+      {
+        "num": "03",
+        "title": "Дисципліна",
+        "description": "Системність, бездоганна підготовка та серйозне ставлення до кожної публічної появи."
+      },
+      {
+        "num": "04",
+        "title": "Розвиток",
+        "description": "Постійне прагнення до досконалості та готовність до масштабних творчих проєктів."
+      }
+    ],
+    "quote": "Мій бренд — це більше, ніж зовнішність. Це присутність, елегантність, впевненість і здатність залишати сильне враження.",
+    "quoteAuthor": "Maria Popilian"
+  },
+  "careerTimeline": {
+    "watermark": "HER LEGACY",
+    "eyebrow": "Career & Titles",
+    "titleLine1": "Шлях",
+    "titleAccent": "досягнень",
+    "description": "Історія дисципліни, побудови іміджу та послідовного професійного зростання. Кожен етап підсилює статус, візуальну впізнаваність і бренд Марії.",
+    "highlights": [
+      { "value": "2026", "label": "Головний титул" },
+      { "value": "15+", "label": "Проєктів" }
+    ],
+    "achievements": [
+      {
+        "year": "2026",
+        "title": "Красуня України",
+        "description": "Національний титул, який закріпив елегантність, публічний статус та сильну професійну присутність.",
+        "details": "Ця перемога стала кульмінацією років роботи над собою. Титул відкрив двері до міжнародних контрактів, участі у глобальних благодійних ініціативах на рівні ООН та зйомок для обкладинок провідних глянцевих видань. Це не просто корона, а платформа для трансляції української краси та сили на весь світ."
+      },
+      {
+        "year": "2025",
+        "title": "Міжнародні Конкурси",
+        "description": "Участь у престижних змаганнях краси та розвиток впізнаваної fashion-ідентичності.",
+        "details": "Представлення України на міжнародній арені вимагало бездоганної підготовки, вивчення протоколів та створення десятків унікальних образів з топовими дизайнерами. Це був етап масштабної трансформації з локальної моделі у впізнавану міжнародну персону."
+      },
+      {
+        "year": "2024",
+        "title": "Модні Проєкти",
+        "description": "Колаборації, публічні виступи та візуальні зйомки у преміальній естетиці.",
+        "details": "Серія ексклюзивних контрактів з преміальними брендами. Відкриття показів на Ukrainian Fashion Week, зйомки для масштабних рекламних кампейнів нових колекцій та робота з найкращими fashion-фотографами індустрії."
+      },
+      {
+        "year": "2024",
+        "title": "Editorial Зйомки",
+        "description": "Фотосесії журнального формату з акцентом на стиль, стайлінг та глибокий образ.",
+        "details": "Створення концептуальних візуальних історій. Фокус на високу моду, артову фотографію та створення глибоких, драматичних образів, що розкривають різні грані особистості перед об'єктивом."
+      },
+      {
+        "year": "2023",
+        "title": "Особистий Бренд",
+        "description": "Створення впізнаваного імені, розвиток соціальних мереж та публічного іміджу.",
+        "details": "Стратегічний перехід від звичайного моделінгу до створення власного імені як самостійного бренду. Формування лояльної аудиторії, кристалізація власного стилю та перші великі амбасадорські контракти з beauty-брендами."
+      },
+      {
+        "year": "2023",
+        "title": "Початок Кар'єри",
+        "description": "Перші кроки в моделінгу, робота над позуванням та професійною самопрезентацією.",
+        "details": "Перші тестові зйомки, пошук свого унікального стилю та сотні годин роботи в студіях. Закладення фундаментальної дисципліни, вивчення мистецтва дефіле та розуміння того, як працює велика fashion-індустрія зсередини."
+      }
+    ],
+    "quote": "Кожен новий етап — це не просто досягнення, а ще один штрих до образу сильної, елегантної та впізнаваної жінки.",
+    "quoteAuthor": "Maria Popilian"
+  },
+  "charity": {
+    "eyebrow": "Соціальна Місія",
+    "titleLine1": "Краса, що",
+    "titleAccent": "Змінює світ",
+    "paragraphs": [
+      "Бути публічною особою — це не лише про подіуми та обкладинки журналів. Це відповідальність і можливість привертати увагу до справді важливих речей.",
+      "Частина мого професійного шляху присвячена підтримці благодійних ініціатив, допомозі дітям та розвитку культурних проєктів в Україні. Справжня краса завжди йде пліч-о-пліч з добрими справами."
+    ],
+    "buttonLabel": "Дізнатись більше"
+  },
+  "portfolio": {
+    "titleLine1": "Вибране",
+    "titleAccent": "Портфоліо",
+    "items": [
+      {
+        "id": "portfolio-1",
+        "imageUrl": "/seed-images/2.png",
+        "altText": "Editorial fashion photo of Maria Popilian",
+        "category": "Фотосесії",
+        "title": "Editorial Fashion"
+      },
+      {
+        "id": "portfolio-2",
+        "imageUrl": "/seed-images/3.png",
+        "altText": "Runway backstage photo of Maria Popilian",
+        "category": "Бекстейдж",
+        "title": "Runway"
+      },
+      {
+        "id": "portfolio-3",
+        "imageUrl": "/seed-images/4.png",
+        "altText": "Portrait photo of Maria Popilian",
+        "category": "Фотосесії",
+        "title": "Portrait"
+      },
+      {
+        "id": "portfolio-4",
+        "imageUrl": "/seed-images/5.png",
+        "altText": "Gala event photo of Maria Popilian",
+        "category": "Події",
+        "title": "Gala"
+      },
+      {
+        "id": "portfolio-5",
+        "imageUrl": "/seed-images/6.png",
+        "altText": "Pageant photo of Maria Popilian",
+        "category": "Події",
+        "title": "Pageant"
+      }
+    ]
+  },
+  "reels": {
+    "eyebrow": "Videography",
+    "titleLine1": "Motion &",
+    "titleAccent": "Режисура",
+    "moreLabel": "Більше в Instagram",
+    "moreUrl": "https://instagram.com",
+    "items": [
+      {
+        "id": "reel-1",
+        "imageUrl": "/seed-images/4.png",
+        "altText": "Backstage reel cover",
+        "title": "Backstage ПЗ",
+        "duration": "0:45"
+      },
+      {
+        "id": "reel-2",
+        "imageUrl": "/seed-images/5.png",
+        "altText": "Runway highlights reel cover",
+        "title": "Runway Highlights",
+        "duration": "1:20"
+      },
+      {
+        "id": "reel-3",
+        "imageUrl": "/seed-images/6.png",
+        "altText": "Vogue cover shoot reel cover",
+        "title": "Vogue Cover Shoot",
+        "duration": "0:58"
+      }
+    ]
+  },
+  "press": {
+    "watermark": "PUBLICATIONS",
+    "eyebrow": "Визнання",
+    "titleLine1": "Преса &",
+    "titleAccent": "Публікації",
+    "items": [
+      {
+        "year": "2026",
+        "magazine": "VOGUE UKRAINE",
+        "title": "Нове обличчя української моди: Шлях до корони",
+        "category": "Cover Story",
+        "url": "https://vogue.ua/"
+      },
+      {
+        "year": "2025",
+        "magazine": "L'OFFICIEL",
+        "title": "Мистецтво позування та режисура дефіле",
+        "category": "Interview",
+        "url": "https://lofficiel.ua/"
+      },
+      {
+        "year": "2025",
+        "magazine": "HARPER'S BAZAAR",
+        "title": "10 найвпливовіших моделей року за версією редакції",
+        "category": "Editorial",
+        "url": "https://harpersbazaar.com.ua/"
+      },
+      {
+        "year": "2024",
+        "magazine": "ELLE",
+        "title": "Від бекстейджу до подіуму. Історія Марії Попілян",
+        "category": "Feature",
+        "url": "https://elle.ua/"
+      }
+    ]
+  },
+  "journal": {
+    "titlePrefix": "The",
+    "titleAccent": "Journal",
+    "eyebrow": "За лаштунками та Інсайди",
+    "items": [
+      {
+        "id": "journal-1",
+        "imageUrl": "/seed-images/4.png",
+        "altText": "Article cover about posing",
+        "date": "12 Березня, 2026",
+        "title": "Секрети ідеального позування: як знайти свої ракурси",
+        "href": "#",
+        "ctaLabel": "Читати статтю"
+      },
+      {
+        "id": "journal-2",
+        "imageUrl": "/seed-images/6.png",
+        "altText": "Article cover about beauty contest preparation",
+        "date": "05 Березня, 2026",
+        "title": "Щоденник підготовки до конкурсу Красуня України",
+        "href": "#",
+        "ctaLabel": "Читати статтю"
+      },
+      {
+        "id": "journal-3",
+        "imageUrl": "/seed-images/3.png",
+        "altText": "Article cover about fashion week backstage",
+        "date": "28 Лютого, 2026",
+        "title": "За лаштунками Ukrainian Fashion Week 2026",
+        "href": "#",
+        "ctaLabel": "Читати статтю"
+      }
+    ]
+  },
+  "contact": {
+    "watermark": "COLLABORATE",
+    "eyebrow": "Співпраця",
+    "titlePrefix": "Let's",
+    "titleAccent": "Work",
+    "methods": [
+      {
+        "label": "Management",
+        "value": "maria@example.com",
+        "href": "mailto:maria@example.com"
+      },
+      {
+        "label": "Direct",
+        "value": "+380 99 123 45 67",
+        "href": "tel:+380991234567"
+      },
+      {
+        "label": "Socials",
+        "value": "Instagram ↗",
+        "href": "https://instagram.com"
+      }
+    ],
+    "form": {
+      "namePlaceholder": "Ваше ім'я",
+      "emailPlaceholder": "Email",
+      "detailsPlaceholder": "Деталі проєкту...",
+      "submitLabel": "Надіслати Запит"
+    },
+    "footerLeft": "© 2026 MARIA POPILIAN",
+    "footerRight": "Premium Portfolio"
+  }
+}
