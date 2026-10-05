@@ -1,0 +1,17 @@
+# Netlify — статична версія сайту (без CMS-сервера: адмінка /admin тут не працює,
+# контент береться зі src/content/defaultSiteContent.json)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# API немає — чесний 404 замість index.html
+[[redirects]]
+  from = "/api/*"
+  to = "/404"
+  status = 404
+
+# SPA: усі сторінки (/portfolio, /values/...) віддає index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -47,18 +47,15 @@ type PublicSitePayload = {
 
 const photoManifest = manifestData as PhotoSlotManifestItem[];
 
-// Усі фото з src/images (включно з ig/) — фолбек, якщо CMS-сервер недоступний
-const seedImageMap: Record<string, string> = Object.fromEntries(
-  Object.entries(import.meta.glob("../../images/**/*.jpg", { eager: true, import: "default" }) as Record<string, string>).map(
-    ([path, url]) => [path.replace("../../images/", ""), url],
-  ),
-);
+// Фото лежать у src/images і доступні як /seed-images/<шлях>: у dev і на Render їх роздає
+// CMS-сервер, у статичному білді (Netlify) — копія в dist/seed-images (див. vite.config.ts)
+const seedImageUrl = (file: string) => `/seed-images/${file}`;
 
 function buildFallbackItems() {
   return photoManifest
     .map<PhotoSlot>((slot) => ({
       ...slot,
-      imageUrl: seedImageMap[slot.seedImage] ?? seedImageMap["7.jpg"],
+      imageUrl: seedImageUrl(slot.seedImage),
       updatedAt: null,
     }))
     .sort((left, right) => left.sortOrder - right.sortOrder);
@@ -86,7 +83,7 @@ const SiteContentContext = createContext<SiteContentContextValue | null>(null);
 
 async function fetchSiteContent() {
   const response = await fetch("/api/public/site-content");
-  if (!response.ok) {
+  if (!response.ok || !response.headers.get("content-type")?.includes("application/json")) {
     throw new Error("Не вдалося завантажити контент із сервера.");
   }
 
