@@ -12,10 +12,25 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2315120f'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23cdb389'%3EM%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" />
+    <!-- Головне фото починає вантажитись одразу, не чекаючи JS (телефон бере мініатюру) -->
+    <link rel="preload" as="image" href="/seed-images/ig/paris-wings.jpg" imagesrcset="/seed-images/thumbs/ig/paris-wings.jpg 720w, /seed-images/ig/paris-wings.jpg 1440w" imagesizes="(min-width: 1024px) 45vw, 90vw" fetchpriority="high" />
+    <style>
+      html, body { background: #050505; margin: 0; }
+      /* Заставка, поки вантажиться JS: React замінить вміст #root */
+      .boot { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+        background: radial-gradient(circle at top, #1b1610 0%, #050505 45%, #020202 100%); color: #f2ebe0;
+        font-family: "Playfair Display", Georgia, serif; }
+      .boot__name { font-size: clamp(2.4rem, 8vw, 4.5rem); letter-spacing: -0.02em; }
+      .boot__name em { color: #b39a74; }
+      .boot__line { width: 120px; height: 1px; background: rgba(179,154,116,.25); overflow: hidden; }
+      .boot__line::after { content: ""; display: block; width: 40%; height: 100%; background: #b39a74; animation: boot 1.1s ease-in-out infinite; }
+      @keyframes boot { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="boot"><div class="boot__name">Maria <em>Popilian</em></div><div class="boot__line"></div></div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

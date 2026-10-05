@@ -60,7 +60,7 @@ export function Journal() {
             <Reveal key={item.id || index} delay={index * 0.08}>
               <a href={item.href || undefined} className="group block">
                 <div className="aspect-[4/5] overflow-hidden rounded-[1.35rem] border border-cream/10 bg-sand">
-                  <Photo src={item.imageUrl} alt={item.altText || item.title} className="h-full w-full object-cover transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" />
+                  <Photo src={item.imageUrl} alt={item.altText || item.title} sizes="(min-width: 768px) 33vw, 100vw" className="h-full w-full object-cover transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" />
                 </div>
                 <p className="eyebrow mt-6 text-stone">{item.date}</p>
                 <h3 className="font-display mt-3 text-2xl leading-snug text-ink transition-colors group-hover:text-gold">{item.title}</h3>

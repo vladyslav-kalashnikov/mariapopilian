@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, Crown } from "lucide-react";
 
 import { useSiteContent } from "@/app/content/SiteContentProvider";
-import { easeLuxe } from "./primitives";
+import { easeLuxe, responsiveSrc } from "./primitives";
 
 export function Hero({ onNavigate }: { onNavigate: (page: string) => void }) {
   const { content, photos } = useSiteContent();
@@ -88,7 +88,7 @@ export function Hero({ onNavigate }: { onNavigate: (page: string) => void }) {
             transition={{ duration: 1.5, ease: easeLuxe }}
           >
             <motion.img
-              src={photo?.imageUrl}
+              {...responsiveSrc(photo?.imageUrl, "(min-width: 1024px) 45vw, 90vw")}
               alt={photo?.altText ?? `${hero.firstName} ${hero.lastName}`}
               loading="eager"
               {...{ fetchpriority: "high" }}

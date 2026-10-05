@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
 
-import { AdminPage } from "./admin/AdminPage";
 import { SiteContentProvider, useSiteContent } from "./content/SiteContentProvider";
 import { LuxuryBackdrop } from "./components/LuxuryBackdrop";
 import { SiteNav } from "./site/SiteNav";
@@ -14,6 +13,9 @@ import { PageHeader } from "./site/primitives";
 import { hasMediaContent } from "./site/navLinks";
 import { isAdminPath, normalizePageId, pageToPath, pathnameToPage, valueSlugFromPath, type PublicPageId } from "./lib/routes";
 import { ValuePage } from "./site/ValuePage";
+
+// Адмінка важка (~1000 рядків редактора) — окремий чанк, відвідувачам сайту не потрібна
+const AdminPage = lazy(() => import("./admin/AdminPage").then((module) => ({ default: module.AdminPage })));
 
 const pageTitles: Record<PublicPageId, string> = {
     home: "Марія Попілян — модель, хореограф, Красуня України 2026",
@@ -162,7 +164,9 @@ export default function App() {
         return (
             <SiteContentProvider>
                 <LuxuryBackdrop />
-                <AdminPage onClose={() => navigateTo(pageToPath("home"))} />
+                <Suspense fallback={null}>
+                    <AdminPage onClose={() => navigateTo(pageToPath("home"))} />
+                </Suspense>
             </SiteContentProvider>
         );
     }

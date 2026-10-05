@@ -40,6 +40,7 @@ export function Values({ onNavigate }: { onNavigate: (page: string) => void }) {
               >
                 {value.imageUrl && (
                   <Photo
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     src={value.imageUrl}
                     alt=""
                     aria-hidden

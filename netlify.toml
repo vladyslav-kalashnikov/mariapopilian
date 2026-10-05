@@ -15,3 +15,14 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Кеш: файли з хешем у назві — назавжди, фото — тиждень
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/seed-images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

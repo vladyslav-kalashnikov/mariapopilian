@@ -60,22 +60,46 @@ export function SectionTitle({
   );
 }
 
-/** Фото з лінивим завантаженням і тихим фолбеком, якщо файл не відкрився */
-export function Photo({ src, alt, className = "", eager = false, ...rest }: ImgHTMLAttributes<HTMLImageElement> & { eager?: boolean }) {
+/** Мініатюра (720px) для фото з /seed-images; для завантажених через CMS (/uploads) мініатюр немає */
+export function thumbUrl(src?: string) {
+  if (!src || !src.startsWith("/seed-images/") || src.startsWith("/seed-images/thumbs/")) return null;
+  return src.replace("/seed-images/", "/seed-images/thumbs/");
+}
+
+/** Адаптивні атрибути: телефон бере мініатюру, великий екран — повне фото */
+export function responsiveSrc(src: string | undefined, sizes: string) {
+  const thumb = thumbUrl(src);
+  if (!src || !thumb) return { src };
+  return { src: thumb, srcSet: `${thumb} 720w, ${src} 1440w`, sizes };
+}
+
+/** Фото з лінивим завантаженням, мініатюрою і тихим фолбеком, якщо файл не відкрився */
+export function Photo({
+  src,
+  alt,
+  className = "",
+  eager = false,
+  sizes = "(min-width: 1024px) 40vw, 90vw",
+  ...rest
+}: ImgHTMLAttributes<HTMLImageElement> & { eager?: boolean }) {
   const [failed, setFailed] = useState(false);
+  const [useOriginal, setUseOriginal] = useState(false);
 
   if (!src || failed) {
     return <div role="img" aria-label={alt} className={`bg-sand ${className}`} />;
   }
 
+  const responsive = useOriginal ? { src } : responsiveSrc(src, sizes);
+
   return (
     <img
-      src={src}
+      {...responsive}
       alt={alt}
       loading={eager ? "eager" : "lazy"}
       decoding="async"
       {...(eager ? { fetchpriority: "high" } : {})}
-      onError={() => setFailed(true)}
+      // Немає мініатюри (напр. нове фото з CMS) — пробуємо оригінал, потім заглушка
+      onError={() => (useOriginal || !thumbUrl(src) ? setFailed(true) : setUseOriginal(true))}
       className={className}
       {...rest}
     />

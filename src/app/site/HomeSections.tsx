@@ -126,7 +126,7 @@ function FeaturedCard({ item, index, onNavigate, className }: NavigateProps & { 
       transition={{ duration: 1, delay: (index % 3) * 0.1, ease: easeLuxe }}
       className={`group relative overflow-hidden rounded-[1.35rem] border border-cream/10 bg-sand text-left shadow-[0_30px_80px_rgba(0,0,0,0.35)] ${className}`}
     >
-      <Photo src={item.imageUrl} alt={item.altText || item.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]" />
+      <Photo src={item.imageUrl} alt={item.altText || item.title} sizes={index === 0 ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 50vw"} className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]" />
       <span className="absolute inset-0 bg-gradient-to-t from-night/60 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
       <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 text-cream md:p-6">
         <span>

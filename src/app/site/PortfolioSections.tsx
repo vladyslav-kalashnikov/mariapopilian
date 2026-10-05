@@ -59,7 +59,7 @@ export function PortfolioGrid() {
                 transition={{ duration: 0.8, delay: (index % PAGE < 6 ? index % PAGE : 6) * 0.06, ease: easeLuxe }}
                 className="group relative mb-3 block w-full break-inside-avoid overflow-hidden rounded-[1.25rem] border border-cream/10 bg-sand text-left shadow-[0_30px_80px_rgba(0,0,0,0.35)] md:mb-6"
               >
-                <Photo src={item.imageUrl} alt={item.altText || item.title} className="block h-auto w-full transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]" />
+                <Photo src={item.imageUrl} alt={item.altText || item.title} sizes="(min-width: 768px) 33vw, 50vw" className="block h-auto w-full transition-transform duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]" />
                 <span className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/0 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <span className="absolute inset-x-0 bottom-0 translate-y-3 p-4 text-cream opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:p-6">
                   <span className="eyebrow block text-[0.58rem] text-gold-soft">{item.category}</span>
@@ -229,7 +229,7 @@ export function Reels() {
             transition={{ duration: 1, delay: index * 0.1, ease: easeLuxe }}
             className="group relative aspect-[9/16] w-[72vw] max-w-[340px] shrink-0 snap-start overflow-hidden rounded-[2rem] bg-cream/5 md:w-[300px]"
           >
-            <Photo src={reel.imageUrl} alt={reel.altText || reel.title} className="absolute inset-0 h-full w-full object-cover opacity-80 transition-all duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:opacity-100" />
+            <Photo src={reel.imageUrl} alt={reel.altText || reel.title} sizes="(min-width: 768px) 300px, 72vw" className="absolute inset-0 h-full w-full object-cover opacity-80 transition-all duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:opacity-100" />
             <span className="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent to-night/20" />
             <span className="eyebrow absolute right-4 top-4 rounded-full bg-night/40 px-3 py-2 text-[0.6rem] backdrop-blur-md">{reel.duration}</span>
             <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cream/40 bg-cream/10 backdrop-blur-md transition-transform duration-500 group-hover:scale-110">
