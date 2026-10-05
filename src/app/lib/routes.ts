@@ -25,7 +25,19 @@ export function normalizePageId(page: string): PublicPageId {
 }
 
 export function pathnameToPage(pathname: string): PublicPageId {
+  // Сторінки цінностей — частина розділу «Про Марію»
+  if (valueSlugFromPath(pathname)) return "about";
   return pageByPath[pathname] ?? "home";
+}
+
+/** /values/<slug> → slug (сторінка окремої цінності) */
+export function valueSlugFromPath(pathname: string) {
+  const match = pathname.match(/^\/values\/([a-z0-9-]+)\/?$/);
+  return match ? match[1] : null;
+}
+
+export function valuePath(slug: string) {
+  return `/values/${slug}`;
 }
 
 export function isAdminPath(pathname: string) {

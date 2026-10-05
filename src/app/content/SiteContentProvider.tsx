@@ -9,14 +9,6 @@ import {
 } from "react";
 
 import manifestData from "@/content/photoManifest.json";
-import img2 from "@/images/2.png";
-import img3 from "@/images/3.png";
-import img4 from "@/images/4.png";
-import img5 from "@/images/5.png";
-import img6 from "@/images/6.png";
-import img7 from "@/images/7.png";
-import img8 from "@/images/8.png";
-import img9 from "@/images/9.png";
 import { defaultSiteContent, mergeSiteContent, type SiteContent } from "@/content/siteContent";
 
 export type PhotoSlotManifestItem = {
@@ -55,22 +47,18 @@ type PublicSitePayload = {
 
 const photoManifest = manifestData as PhotoSlotManifestItem[];
 
-const seedImageMap: Record<string, string> = {
-  "2.png": img2,
-  "3.png": img3,
-  "4.png": img4,
-  "5.png": img5,
-  "6.png": img6,
-  "7.png": img7,
-  "8.png": img8,
-  "9.png": img9,
-};
+// Усі фото з src/images (включно з ig/) — фолбек, якщо CMS-сервер недоступний
+const seedImageMap: Record<string, string> = Object.fromEntries(
+  Object.entries(import.meta.glob("../../images/**/*.jpg", { eager: true, import: "default" }) as Record<string, string>).map(
+    ([path, url]) => [path.replace("../../images/", ""), url],
+  ),
+);
 
 function buildFallbackItems() {
   return photoManifest
     .map<PhotoSlot>((slot) => ({
       ...slot,
-      imageUrl: seedImageMap[slot.seedImage] ?? img9,
+      imageUrl: seedImageMap[slot.seedImage] ?? seedImageMap["7.jpg"],
       updatedAt: null,
     }))
     .sort((left, right) => left.sortOrder - right.sortOrder);

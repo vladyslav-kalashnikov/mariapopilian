@@ -1,7 +1,7 @@
 import { type Dispatch, type ReactNode, type SetStateAction, useEffect, useMemo, useState } from "react";
-import { LoaderCircle, Plus, Save, Trash2, Upload } from "lucide-react";
+import { LoaderCircle, Plus, RotateCcw, Save, Trash2, Upload } from "lucide-react";
 
-import { type SiteContent, cloneSiteContent } from "@/content/siteContent";
+import { type SiteContent, cloneSiteContent, defaultSiteContent } from "@/content/siteContent";
 
 type ContentEditorProps = {
   authToken: string;
@@ -353,6 +353,18 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
                 {status.text}
               </span>
             )}
+            <button
+              type="button"
+              onClick={() => {
+                if (window.confirm("Підставити стандартний контент з коду? Поточні тексти буде замінено в чернетці — збережіть, щоб застосувати.")) {
+                  setDraft(cloneSiteContent(defaultSiteContent));
+                }
+              }}
+              className={subtleButtonClassName}
+            >
+              <RotateCcw className="h-4 w-4" />
+              Стандартний контент
+            </button>
             <button type="button" onClick={() => void handleSave()} disabled={isSaving || !isDirty} className={`${accentButtonClassName} ${isSaving || !isDirty ? "cursor-not-allowed opacity-50" : ""}`}>
               {isSaving ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
               {isDirty ? "Зберегти контент" : "Змін немає"}
@@ -582,6 +594,13 @@ export function ContentEditor({ authToken, content, contentUpdatedAt, onRefresh 
               <div className="space-y-3">
                 <input value={item.title} onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].title = event.target.value; })} className={inputClassName} />
                 <textarea value={item.description} onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].description = event.target.value; })} rows={3} className={textareaClassName} />
+                {/* Окрема сторінка цінності: /values/<slug>. Порожній slug — без сторінки */}
+                <input value={item.slug ?? ""} placeholder="slug сторінки, напр. vpevnenist" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].slug = event.target.value.trim() || undefined; })} className={inputClassName} />
+                <input value={item.imageUrl ?? ""} placeholder="URL фото для сторінки" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].imageUrl = event.target.value; })} className={inputClassName} />
+                <textarea value={item.lead ?? ""} placeholder="Вступ (лід) сторінки" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].lead = event.target.value; })} rows={2} className={textareaClassName} />
+                <textarea value={(item.body ?? []).join("\n\n")} placeholder="Текст сторінки — абзаци через порожній рядок" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].body = event.target.value.split(/\n\s*\n/); })} rows={8} className={textareaClassName} />
+                <textarea value={item.quote ?? ""} placeholder="Цитата" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].quote = event.target.value; })} rows={2} className={textareaClassName} />
+                <input value={item.quoteSource ?? ""} placeholder="Джерело цитати" onChange={(event) => mutateDraft((next) => { next.personalBrand.values[index].quoteSource = event.target.value; })} className={inputClassName} />
               </div>
               <button type="button" onClick={() => mutateDraft((next) => { next.personalBrand.values.splice(index, 1); })} className={subtleButtonClassName}>
                 <Trash2 className="h-4 w-4" />

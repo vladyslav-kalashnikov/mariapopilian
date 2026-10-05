@@ -31,6 +31,13 @@ export type BrandValue = {
   num: string;
   title: string;
   description: string;
+  /** Адреса окремої сторінки: /values/<slug>. Без slug картка не клікабельна */
+  slug?: string;
+  imageUrl?: string;
+  lead?: string;
+  body?: string[];
+  quote?: string;
+  quoteSource?: string;
 };
 
 export type TimelineItem = {
@@ -54,6 +61,8 @@ export type ReelItem = {
   altText: string;
   title: string;
   duration: string;
+  /** Посилання на конкретний reel; без нього веде на moreUrl */
+  url?: string;
 };
 
 export type PressItem = {

@@ -40,3 +40,6 @@ node_modules/
 ### Local Environment ###
 .env
 .env.local
+
+# Архів фото з Instagram (не для репозиторію)
+/instagram/

@@ -1,0 +1,60 @@
+/* Дизайн-токени публічного сайту: айворі / чорнило / м'яке золото */
+@theme {
+  /* Темна тема, як в оригінальному дизайні: глибокий чорний + золото.
+     Поверхні напівпрозорі — крізь них видно золоті світіння LuxuryBackdrop */
+  --color-ivory: rgb(5 5 5 / 0.55);
+  --color-paper: rgb(12 11 10 / 0.6);
+  --color-sand: rgb(22 19 15 / 0.72);
+  --color-ink: #f2ebe0;
+  --color-stone: #a0968a;
+  --color-gold: #b39a74;
+  --color-gold-soft: #dcc59f;
+  /* Завжди темне (смуги, підкладки під фото) і завжди світле (текст на них) */
+  --color-night: #0b0a09;
+  --color-cream: #f5efe6;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+  html { scroll-behavior: auto !important; }
+}

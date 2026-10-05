@@ -482,12 +482,16 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (pathname.startsWith("/seed-images/")) {
-    const filePath = safeJoin(seedImagesDir, pathname.replace("/seed-images", ""));
+    let filePath = safeJoin(seedImagesDir, pathname.replace("/seed-images", ""));
     if (!filePath) {
       sendJson(res, 400, { error: "Invalid path." });
       return;
     }
-    streamFile(res, filePath);
+    // Старі записи в базі посилаються на N.png — тепер фото лежать як оптимізовані N.jpg
+    if (!fs.existsSync(filePath) && filePath.endsWith(".png")) {
+      filePath = filePath.replace(/\.png$/, ".jpg");
+    }
+    streamFile(res, filePath, "public, max-age=604800");
     return;
   }
 

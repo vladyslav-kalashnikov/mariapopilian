@@ -34,7 +34,8 @@ function run(name, command, args, extraEnv = {}) {
 
 run("server", process.execPath, ["server/server.mjs"], {
   NODE_ENV: "development",
-  PORT: process.env.PORT ?? "3001",
+  // Vite-проксі завжди ходить на 3001, тож зовнішній PORT (напр. від прев'ю-інструментів) тут не беремо
+  PORT: process.env.CMS_PORT ?? "3001",
 });
 
 run("client", process.execPath, [viteBin], {

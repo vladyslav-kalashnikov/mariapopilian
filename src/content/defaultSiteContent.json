@@ -1,340 +1,1868 @@
 {
   "navigation": {
-    "logoPrimary": "M",
-    "logoAccent": "P",
+    "logoPrimary": "Maria",
+    "logoAccent": "Popilian",
     "links": [
-      { "id": "home", "label": "Home" },
-      { "id": "portfolio", "label": "Portfolio" },
-      { "id": "about", "label": "About" },
-      { "id": "press", "label": "Press & Media" },
-      { "id": "contact", "label": "Contact" }
+      {
+        "id": "home",
+        "label": "Головна"
+      },
+      {
+        "id": "portfolio",
+        "label": "Портфоліо"
+      },
+      {
+        "id": "about",
+        "label": "Про Марію"
+      },
+      {
+        "id": "press",
+        "label": "Щоденник"
+      },
+      {
+        "id": "contact",
+        "label": "Контакти"
+      }
     ],
     "socialLinks": [
-      { "id": "instagram", "label": "Instagram", "url": "https://instagram.com" },
-      { "id": "facebook", "label": "Facebook", "url": "https://facebook.com" },
-      { "id": "location", "label": "Location", "url": "#" }
+      {
+        "id": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/m.popilian/"
+      },
+      {
+        "id": "choreography",
+        "label": "4choreography",
+        "url": "https://www.instagram.com/4choreography/"
+      }
     ]
   },
   "footer": {
-    "copyright": "© 2026 MARIA POPILIAN",
-    "ctaLabel": "WORK WITH ME",
+    "copyright": "© 2026 Maria Popilian",
+    "ctaLabel": "Співпраця",
     "cmsLabel": "CMS"
   },
   "hero": {
     "badge": "Красуня України 2026",
-    "firstName": "MARIA",
-    "lastName": "POPILIAN",
-    "roles": ["PERSONAL BRAND", "MODEL", "CHOREOGRAPHER"],
-    "ctaLabel": "DISCOVER",
+    "firstName": "Maria",
+    "lastName": "Popilian",
+    "roles": [
+      "Модель",
+      "Хореограф",
+      "Особистий бренд"
+    ],
+    "ctaLabel": "Дивитись портфоліо",
     "highlights": [
-      { "label": "Editorial Presence", "value": "Premium visual direction" },
-      { "label": "Live CMS", "value": "Фото можна міняти через /admin" },
-      { "label": "Ready for Brands", "value": "Portfolio, reels, press" }
+      {
+        "label": "Модельна школа",
+        "value": "«Астар»"
+      },
+      {
+        "label": "Подіум",
+        "value": "Paris Fashion Days"
+      },
+      {
+        "label": "Освіта",
+        "value": "Хореограф, диплом 2026"
+      }
     ]
   },
   "about": {
-    "watermark": "IDENTITY",
+    "watermark": "Identity",
     "eyebrow": "Хто вона",
-    "headlineLines": ["Естетика.", "Вплив.", "Присутність."],
+    "headlineLines": [
+      "Модель.",
+      "Хореограф.",
+      "Красуня України."
+    ],
     "paragraphs": [
-      "Сучасна королева краси, модель та сильний особистий бренд з витонченою візуальною ідентичністю. Її стиль — це преміальна естетика.",
-      "Образ Марії поєднує жіночність, дисципліну та високі амбіції, створюючи позиціонування, яке ідеально підходить для масштабних проєктів."
+      "Марія Попілян — модель школи «Астар», хореограф і володарка титулу «Красуня України 2026». Вона виходила на подіум Paris Fashion Days, відкривала фінальний вихід показу у Львові та знімалася в Парижі, Празі, Відні й Будапешті.",
+      "За плечима — чотири роки в Академії культури і мистецтв в Ужгороді та державний іспит з хореографії на відмінно. Тому в кожному кадрі й кожному виході на сцену відчувається танець: пластика, характер і впевненість у русі."
     ],
     "stats": [
-      { "value": "2026", "label": "ТИТУЛ" },
-      { "value": "15+", "label": "ПРОЄКТІВ" },
-      { "value": "10K", "label": "АУДИТОРІЯ" }
+      {
+        "value": "2026",
+        "label": "Красуня України"
+      },
+      {
+        "value": "6+",
+        "label": "Країн зйомок"
+      },
+      {
+        "value": "2K+",
+        "label": "Instagram"
+      }
     ]
   },
   "services": {
-    "eyebrow": "Експертиза",
+    "eyebrow": "Співпраця",
     "titleLine1": "Напрямки",
-    "titleAccent": "Співпраці",
-    "description": "Від подіуму до режисури — комплексний професійний підхід до кожного проєкту у сфері fashion та beauty індустрії.",
+    "titleAccent": "роботи",
+    "description": "Від подіуму до постановки показу — професійний підхід до кожного проєкту у fashion та beauty.",
     "items": [
       {
         "num": "01",
-        "title": "Fashion Modeling",
-        "desc": "Участь у рекламних кампаніях, лукбуках та editorial-зйомках для преміум брендів."
+        "title": "Фотосесії",
+        "desc": "Editorial, рекламні та бренд-зйомки в студії й на локаціях — від Парижа до Праги."
       },
       {
         "num": "02",
-        "title": "Runway Shows",
-        "desc": "Професійне дефіле для тижнів моди та ексклюзивних показів дизайнерів."
+        "title": "Подіум",
+        "desc": "Покази дизайнерів і fashion-події: Paris Fashion Days, покази у Львові та Будапешті."
       },
       {
         "num": "03",
-        "title": "Choreography",
-        "desc": "Постановка дефіле, режисура показів та майстер-класи з професійного позування."
+        "title": "Хореографія",
+        "desc": "Сценічні номери та перформанси (як із Kochut Jewelry), постановка дефіле, підготовка моделей. Команда — @4choreography."
       },
       {
         "num": "04",
-        "title": "Ambassadorship",
-        "desc": "Представництво брендів, інтеграції та створення іміджевого контенту."
+        "title": "Амбасадорство",
+        "desc": "Образи для брендів одягу й прикрас: TRICOTSHOP, by._iren, by_vel, Kochut, Bogynya — зйомки та контент."
       }
     ]
   },
   "personalBrand": {
-    "watermark": "PHILOSOPHY",
-    "eyebrow": "Позиціонування",
-    "titleMain": "Цінності &",
-    "titleAccent": "Візія",
+    "watermark": "Philosophy",
+    "eyebrow": "Цінності",
+    "titleMain": "Те, на чому",
+    "titleAccent": "тримається образ",
     "values": [
       {
         "num": "01",
         "title": "Впевненість",
-        "description": "Сильна присутність, побудована на елегантності, вірі в себе та незабутньому візуальному образі."
+        "slug": "vpevnenist",
+        "description": "Спокійна сила й присутність, яку відчувають і в кадрі, і на сцені.",
+        "imageUrl": "/seed-images/ig/crowning-2026.jpg",
+        "lead": "Впевненість — це не відсутність хвилювання. Це вміння вийти на сцену, коли серце б'ється найшвидше.",
+        "body": [
+          "Коли в березні 2026 року Марії вручили корону «Красуні України», за цим моментом стояли місяці підготовки: дефіле у вечірній сукні, народний вихід у вишитій сорочці з червоною фатою, презентація, репетиції до пізньої ночі. На кожному етапі — сотні поглядів журі та глядачів.",
+          "Її впевненість не гучна. Вона в рівній спині на подіумі, у погляді, який не тікає від камери, у спокої за лаштунками, коли все навколо поспішає. Цьому Марія вчилася роками — у модельній школі «Астар», на показах і в танцювальній залі.",
+          "Найважливіше, що вона виносить з кожної сцени: впевненість будується не наодинці. Її підтримують наставники, команда візажистів і стилістів, рідні та друзі. Саме тому після перемоги перші слова Марії були подякою."
+        ],
+        "quote": "Дякую кожному, хто вірив у мене та підтримував на цьому шляху.",
+        "quoteSource": "Марія Попілян, після перемоги в «Красуні України 2026»"
       },
       {
         "num": "02",
         "title": "Елегантність",
-        "description": "Витончений стиль, професійна преміальна естетика та увага до кожної деталі образу."
+        "slug": "elehantnist",
+        "description": "Витончений стиль і увага до кожної деталі образу.",
+        "imageUrl": "/seed-images/ig/paris-louvre.jpg",
+        "lead": "Елегантність — це коли образ говорить раніше, ніж ти встигнеш сказати слово.",
+        "body": [
+          "Березень 2025 року, Paris Fashion Days. Марія виходить на подіум у білій сукні з величезними крилами від української дизайнерки by._iren. Макіяж — Dina Dada, зачіска — Bersenova Stylist. Кожна деталь продумана так, щоб образ виглядав легким, хоча за ним — години роботи цілої команди.",
+          "Після показу — вечірній Париж: зйомки біля Лувру в рожевій сукні та біля Ейфелевої вежі. Для Марії елегантність не обмежується вечірніми образами: вона так само помітна в простій чорній сукні, у сукнях TRICOTSHOP для щоденних виходів, у тому, як вона тримається в кадрі.",
+          "Її правило просте: сукня не має затьмарювати людину, а людина — сукню. Коли обидва звучать в унісон, з'являється те саме відчуття витонченості, яке неможливо підробити."
+        ],
+        "quote": "Досі не можу повірити в те, що це був не сон!",
+        "quoteSource": "Марія Попілян про Paris Fashion Days"
       },
       {
         "num": "03",
         "title": "Дисципліна",
-        "description": "Системність, бездоганна підготовка та серйозне ставлення до кожної публічної появи."
+        "slug": "dystsyplina",
+        "description": "Бездоганна підготовка та серйозне ставлення до кожної публічної появи.",
+        "imageUrl": "/seed-images/ig/ballet-blue.jpg",
+        "lead": "За кожним легким рухом на сцені стоять сотні годин, яких глядач ніколи не побачить.",
+        "body": [
+          "Чотири роки навчання в Академії культури і мистецтв в Ужгороді — це щоденні заняття в танцювальній залі, концерти, виступи, переживання і перемоги. Влітку 2026 року Марія склала державний іспит з хореографії на відмінно.",
+          "Хореографія навчила її того, чого не дає жоден модельний курс: витривалості, точності, вміння повторювати рух доти, доки він не стане природним. Тому на фотосесіях у балетній пачці чи на подіумі в складній сукні вона рухається так, ніби це найпростіша річ у світі.",
+          "Випускна постановка «Лісова пісня», де Марія виконала роль Мавки, стала підсумком цього шляху. Балетмейстер-постановник — заслужена працівниця культури України Єлізавета Бабяк."
+        ],
+        "quote": "4 роки навчання. Сотні годин у танцювальній залі. Безліч репетицій, концертів, виступів, переживань, радості, сліз, перемог і незабутніх моментів.",
+        "quoteSource": "Марія Попілян, червень 2026"
       },
       {
         "num": "04",
         "title": "Розвиток",
-        "description": "Постійне прагнення до досконалості та готовність до масштабних творчих проєктів."
+        "slug": "rozvytok",
+        "description": "Постійне навчання, нові формати й готовність до масштабних проєктів.",
+        "imageUrl": "/seed-images/ig/graduation-stage.jpg",
+        "lead": "Кожен завершений етап — не фініш, а сходинка до наступного.",
+        "body": [
+          "За останні два роки Марія пройшла шлях від перших тестових зйомок до міжнародного подіуму: фотосесії з Viktoria Praha, Paris Fashion Days, відкриття фінального виходу показу в стилі Denim у Львові, казковий показ образів у Будапешті, зйомки в Празі та Відні.",
+          "Вона не обмежує себе одним жанром. Модельна робота, хореографічні перформанси (як номер для ювелірного бренду Kochut), зйомки для українських брендів TRICOTSHOP, by._iren і by_vel, власна танцювальна команда @4choreography — усе це частини одного шляху.",
+          "Титул «Красуня України 2026» і диплом хореографа Марія отримала в одному році. І сама каже, що це не підсумок, а початок."
+        ],
+        "quote": "Цей розділ завершено. Але найцікавіше тільки починається.",
+        "quoteSource": "Марія Попілян"
       }
     ],
-    "quote": "Мій бренд — це більше, ніж зовнішність. Це присутність, елегантність, впевненість і здатність залишати сильне враження.",
-    "quoteAuthor": "Maria Popilian"
+    "quote": "Це більше, ніж вихід на сцену — це про відчуття коріння, про гордість бути частиною української культури, про красу, яка народжується з душі.",
+    "quoteAuthor": "Марія Попілян"
   },
   "careerTimeline": {
-    "watermark": "HER LEGACY",
-    "eyebrow": "Career & Titles",
-    "titleLine1": "Шлях",
-    "titleAccent": "досягнень",
-    "description": "Історія дисципліни, побудови іміджу та послідовного професійного зростання. Кожен етап підсилює статус, візуальну впізнаваність і бренд Марії.",
+    "watermark": "Career",
+    "eyebrow": "Шлях",
+    "titleLine1": "Етапи",
+    "titleAccent": "кар'єри",
+    "description": "Події, що сформували Марію: сцена, подіум, зйомки й навчання — все з її Instagram.",
     "highlights": [
-      { "value": "2026", "label": "Головний титул" },
-      { "value": "15+", "label": "Проєктів" }
+      {
+        "value": "2026",
+        "label": "Красуня України"
+      },
+      {
+        "value": "2025",
+        "label": "Paris Fashion Days"
+      }
     ],
     "achievements": [
       {
         "year": "2026",
-        "title": "Красуня України",
-        "description": "Національний титул, який закріпив елегантність, публічний статус та сильну професійну присутність.",
-        "details": "Ця перемога стала кульмінацією років роботи над собою. Титул відкрив двері до міжнародних контрактів, участі у глобальних благодійних ініціативах на рівні ООН та зйомок для обкладинок провідних глянцевих видань. Це не просто корона, а платформа для трансляції української краси та сили на весь світ."
+        "title": "Диплом хореографа",
+        "description": "Академія культури і мистецтв, Ужгород. Роль Мавки в драмі-феєрії «Лісова пісня».",
+        "details": "Чотири роки навчання, сотні годин у танцювальній залі, концерти й виступи — і державний іспит, складений на відмінно. Випускна постановка «Лісова пісня» (балетмейстер-постановник — заслужена працівниця культури України Єлізавета Бабяк), де Марія виконала головну роль Мавки."
+      },
+      {
+        "year": "2026",
+        "title": "Красуня України 2026",
+        "description": "Перемога в національному конкурсі краси.",
+        "details": "Офіційний титул «Красуня України 2026» — разом із модельною школою «Астар», салоном Bogynya та командою Beauty Corner Uzhhorod. Корона, рожева вечірня сукня і сцена, яку не забути."
+      },
+      {
+        "year": "2026",
+        "title": "Перформанс Kochut",
+        "description": "Хореографічний перформанс для ювелірного бренду.",
+        "details": "Сценічний номер разом із @kochut_jewelry: прикраси як частина руху, світла й танцю. Також весною 2026 — зйомки в Празі та образи для TRICOTSHOP і дизайнерки by._iren."
       },
       {
         "year": "2025",
-        "title": "Міжнародні Конкурси",
-        "description": "Участь у престижних змаганнях краси та розвиток впізнаваної fashion-ідентичності.",
-        "details": "Представлення України на міжнародній арені вимагало бездоганної підготовки, вивчення протоколів та створення десятків унікальних образів з топовими дизайнерами. Це був етап масштабної трансформації з локальної моделі у впізнавану міжнародну персону."
+        "title": "Казковий Будапешт",
+        "description": "Вечірній показ образів у Будапешті.",
+        "details": "Казковий образ від Bles Team — сукня з величезними трояндами, вечірнє місто і розкішна локація."
       },
       {
-        "year": "2024",
-        "title": "Модні Проєкти",
-        "description": "Колаборації, публічні виступи та візуальні зйомки у преміальній естетиці.",
-        "details": "Серія ексклюзивних контрактів з преміальними брендами. Відкриття показів на Ukrainian Fashion Week, зйомки для масштабних рекламних кампейнів нових колекцій та робота з найкращими fashion-фотографами індустрії."
+        "year": "2025",
+        "title": "Показ у Львові",
+        "description": "Відкривала фінальний вихід показу в стилі Denim.",
+        "details": "Честь відкривати фінальну демонстрацію всіх моделей шоу — яскравий фінал і велика гордість."
       },
       {
-        "year": "2024",
-        "title": "Editorial Зйомки",
-        "description": "Фотосесії журнального формату з акцентом на стиль, стайлінг та глибокий образ.",
-        "details": "Створення концептуальних візуальних історій. Фокус на високу моду, артову фотографію та створення глибоких, драматичних образів, що розкривають різні грані особистості перед об'єктивом."
-      },
-      {
-        "year": "2023",
-        "title": "Особистий Бренд",
-        "description": "Створення впізнаваного імені, розвиток соціальних мереж та публічного іміджу.",
-        "details": "Стратегічний перехід від звичайного моделінгу до створення власного імені як самостійного бренду. Формування лояльної аудиторії, кристалізація власного стилю та перші великі амбасадорські контракти з beauty-брендами."
-      },
-      {
-        "year": "2023",
-        "title": "Початок Кар'єри",
-        "description": "Перші кроки в моделінгу, робота над позуванням та професійною самопрезентацією.",
-        "details": "Перші тестові зйомки, пошук свого унікального стилю та сотні годин роботи в студіях. Закладення фундаментальної дисципліни, вивчення мистецтва дефіле та розуміння того, як працює велика fashion-індустрія зсередини."
+        "year": "2025",
+        "title": "Paris Fashion Days",
+        "description": "Подіум у Парижі в сукні дизайнерки by._iren.",
+        "details": "Перший великий міжнародний вихід: показ Paris Fashion Days / Paris Fashion Week від модельної школи «Астар», зйомки біля Лувру й Ейфелевої вежі. Сукня з білими крилами — by._iren, макіяж — Dina Dada, зачіска — Bersenova Stylist."
       }
     ],
-    "quote": "Кожен новий етап — це не просто досягнення, а ще один штрих до образу сильної, елегантної та впізнаваної жінки.",
-    "quoteAuthor": "Maria Popilian"
+    "quote": "Цей розділ завершено. Але найцікавіше тільки починається.",
+    "quoteAuthor": "Марія Попілян"
   },
   "charity": {
-    "eyebrow": "Соціальна Місія",
-    "titleLine1": "Краса, що",
-    "titleAccent": "Змінює світ",
+    "eyebrow": "Сцена і танець",
+    "titleLine1": "Хореографія —",
+    "titleAccent": "мова характеру",
     "paragraphs": [
-      "Бути публічною особою — це не лише про подіуми та обкладинки журналів. Це відповідальність і можливість привертати увагу до справді важливих речей.",
-      "Частина мого професійного шляху присвячена підтримці благодійних ініціатив, допомозі дітям та розвитку культурних проєктів в Україні. Справжня краса завжди йде пліч-о-пліч з добрими справами."
+      "Чотири роки в Академії культури і мистецтв в Ужгороді зробили з Марії не лише модель, а й справжню артистку сцени. Українсько-народносценічний образ, балет, сучасний перформанс — вона почувається впевнено в кожному жанрі.",
+      "Сьогодні Марія виступає з командою @4choreography, ставить номери для подій і брендів та допомагає моделям знайти свій подіумний крок."
     ],
-    "buttonLabel": "Дізнатись більше"
+    "buttonLabel": "Замовити номер чи постановку"
   },
   "portfolio": {
-    "titleLine1": "Вибране",
-    "titleAccent": "Портфоліо",
+    "titleLine1": "Вибрані",
+    "titleAccent": "роботи",
     "items": [
       {
         "id": "portfolio-1",
-        "imageUrl": "/seed-images/2.png",
-        "altText": "Editorial fashion photo of Maria Popilian",
-        "category": "Фотосесії",
-        "title": "Editorial Fashion"
+        "imageUrl": "/seed-images/ig/paris-wings.jpg",
+        "altText": "Марія Попілян у білій сукні з крилами на показі в Парижі",
+        "category": "Paris Fashion Days",
+        "title": "Paris Fashion Days"
       },
       {
         "id": "portfolio-2",
-        "imageUrl": "/seed-images/3.png",
-        "altText": "Runway backstage photo of Maria Popilian",
-        "category": "Бекстейдж",
-        "title": "Runway"
+        "imageUrl": "/seed-images/ig/crowning-2026.jpg",
+        "altText": "Коронація Марії Попілян на конкурсі «Красуня України 2026»",
+        "category": "Красуня України",
+        "title": "Красуня України 2026"
       },
       {
         "id": "portfolio-3",
-        "imageUrl": "/seed-images/4.png",
-        "altText": "Portrait photo of Maria Popilian",
-        "category": "Фотосесії",
-        "title": "Portrait"
+        "imageUrl": "/seed-images/ig/mavka.jpg",
+        "altText": "Марія Попілян у ролі Мавки в «Лісовій пісні»",
+        "category": "Сцена",
+        "title": "Мавка"
       },
       {
         "id": "portfolio-4",
-        "imageUrl": "/seed-images/5.png",
-        "altText": "Gala event photo of Maria Popilian",
-        "category": "Події",
-        "title": "Gala"
+        "imageUrl": "/seed-images/ig/budapest-roses.jpg",
+        "altText": "Марія Попілян у сукні з трояндами в Будапешті",
+        "category": "Покази та бренди",
+        "title": "Казковий Будапешт"
       },
       {
         "id": "portfolio-5",
-        "imageUrl": "/seed-images/6.png",
-        "altText": "Pageant photo of Maria Popilian",
-        "category": "Події",
-        "title": "Pageant"
+        "imageUrl": "/seed-images/ig/ballet-blue.jpg",
+        "altText": "Марія Попілян у блакитній балетній пачці",
+        "category": "Фотосесії",
+        "title": "Blue Ballet"
+      },
+      {
+        "id": "portfolio-6",
+        "imageUrl": "/seed-images/ig/paris-louvre.jpg",
+        "altText": "Марія Попілян у рожевій сукні біля Лувру",
+        "category": "Paris Fashion Days",
+        "title": "Лувр"
+      },
+      {
+        "id": "portfolio-7",
+        "imageUrl": "/seed-images/ig/ukrainian-culture.jpg",
+        "altText": "Марія Попілян у народному образі з червоною фатою на конкурсі «Красуня України 2026»",
+        "category": "Красуня України",
+        "title": "Народний образ"
+      },
+      {
+        "id": "portfolio-8",
+        "imageUrl": "/seed-images/ig/by-iren-lilac.jpg",
+        "altText": "Марія Попілян у бузковій сукні дизайнерки by._iren",
+        "category": "Покази та бренди",
+        "title": "by._iren"
+      },
+      {
+        "id": "portfolio-9",
+        "imageUrl": "/seed-images/ig/studio-bw.jpg",
+        "altText": "Чорно-біла студійна фотосесія Марії Попілян",
+        "category": "Фотосесії",
+        "title": "Noir Studio"
+      },
+      {
+        "id": "portfolio-10",
+        "imageUrl": "/seed-images/ig/graduation-stage.jpg",
+        "altText": "Марія Попілян на сцені випускного концерту",
+        "category": "Сцена",
+        "title": "Випускний виступ"
+      },
+      {
+        "id": "portfolio-11",
+        "imageUrl": "/seed-images/ig/tricotshop-trio.jpg",
+        "altText": "Марія Попілян з моделями в сукнях TRICOTSHOP",
+        "category": "Покази та бренди",
+        "title": "TRICOTSHOP"
+      },
+      {
+        "id": "portfolio-12",
+        "imageUrl": "/seed-images/ig/budapest-night.jpg",
+        "altText": "Марія Попілян на тлі нічного парламенту в Будапешті",
+        "category": "Подорожі",
+        "title": "Budapest Night"
+      },
+      {
+        "id": "portfolio-13",
+        "imageUrl": "/seed-images/ig/studio-red.jpg",
+        "altText": "Студійна фотосесія Марії Попілян у червоному жакеті",
+        "category": "Фотосесії",
+        "title": "Red Jacket"
+      },
+      {
+        "id": "portfolio-14",
+        "imageUrl": "/seed-images/ig/boginya-dress.jpg",
+        "altText": "Марія Попілян у бузковій вечірній сукні Bogynya",
+        "category": "Красуня України",
+        "title": "Bogynya"
+      },
+      {
+        "id": "portfolio-15",
+        "imageUrl": "/seed-images/ig/paris-eiffel.jpg",
+        "altText": "Марія Попілян біля Ейфелевої вежі",
+        "category": "Paris Fashion Days",
+        "title": "Paris"
+      },
+      {
+        "id": "portfolio-16",
+        "imageUrl": "/seed-images/ig/praha-arches.jpg",
+        "altText": "Марія Попілян серед арок у Празі",
+        "category": "Фотосесії",
+        "title": "Praha"
+      },
+      {
+        "id": "portfolio-17",
+        "imageUrl": "/seed-images/ig/tricotshop-flowers.jpg",
+        "altText": "Марія Попілян у квітковій сукні TRICOTSHOP",
+        "category": "Покази та бренди",
+        "title": "Квіти й легкість"
+      },
+      {
+        "id": "portfolio-18",
+        "imageUrl": "/seed-images/ig/greece-sunset.jpg",
+        "altText": "Марія Попілян на заході сонця біля моря",
+        "category": "Подорожі",
+        "title": "Sea Vibes"
+      },
+      {
+        "id": "portfolio-19",
+        "imageUrl": "/seed-images/ig/ballet-blue-sit.jpg",
+        "altText": "Марія Попілян у балетній пачці на білому тлі",
+        "category": "Фотосесії",
+        "title": "Балет"
+      },
+      {
+        "id": "portfolio-20",
+        "imageUrl": "/seed-images/ig/praha-street.jpg",
+        "altText": "Марія Попілян на старій вулиці",
+        "category": "Фотосесії",
+        "title": "Old Town"
+      },
+      {
+        "id": "portfolio-21",
+        "imageUrl": "/seed-images/ig/white-night.jpg",
+        "altText": "Марія Попілян у білому костюмі вночі",
+        "category": "Подорожі",
+        "title": "White Night"
+      },
+      {
+        "id": "portfolio-astar",
+        "imageUrl": "/seed-images/8.jpg",
+        "altText": "Марія Попілян на подіумі показу «Астар» у білій сукні",
+        "category": "Покази та бренди",
+        "title": "Astar Runway"
+      },
+      {
+        "id": "g-paris_2025-03-31_DH3qVepIPwC_02",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-31_DH3qVepIPwC_02.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-31_DH3qVepIPwC_03",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-31_DH3qVepIPwC_03.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-31_DH3qVepIPwC_04",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-31_DH3qVepIPwC_04.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-30_DH1H4xjoo40_02",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-30_DH1H4xjoo40_02.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-30_DH1H4xjoo40_03",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-30_DH1H4xjoo40_03.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-30_DH1H4xjoo40_04",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-30_DH1H4xjoo40_04.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-30_DH1H4xjoo40_05",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-30_DH1H4xjoo40_05.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-27_DHteKpJoxmm_02",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-27_DHteKpJoxmm_02.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_02",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_02.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_03",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_03.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_04",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_04.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_05",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_05.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_06",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_06.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_07",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_07.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-paris_2025-03-15_DHOrfaNIIzX_08",
+        "imageUrl": "/seed-images/gallery/paris_2025-03-15_DHOrfaNIIzX_08.jpg",
+        "altText": "Марія Попілян — paris fashion days, березень 2025",
+        "category": "Paris Fashion Days",
+        "title": "Березень 2025"
+      },
+      {
+        "id": "g-krasunia_2026-03-26_DWWpteFDLoN_02",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-26_DWWpteFDLoN_02.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-krasunia_2026-03-26_DWWpteFDLoN_03",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-26_DWWpteFDLoN_03.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-krasunia_2026-03-24_DWRfgOVjINH_02",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-24_DWRfgOVjINH_02.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-krasunia_2026-03-24_DWRfgOVjINH_03",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-24_DWRfgOVjINH_03.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-krasunia_2026-03-24_DWRfgOVjINH_04",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-24_DWRfgOVjINH_04.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-krasunia_2026-03-24_DWRfgOVjINH_05",
+        "imageUrl": "/seed-images/gallery/krasunia_2026-03-24_DWRfgOVjINH_05.jpg",
+        "altText": "Марія Попілян — красуня україни, березень 2026",
+        "category": "Красуня України",
+        "title": "Березень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_02",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_02.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_03",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_03.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_04",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_04.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_05",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_05.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_06",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_06.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-scena_2026-06-16_DZp3Ng0jLSR_07",
+        "imageUrl": "/seed-images/gallery/scena_2026-06-16_DZp3Ng0jLSR_07.jpg",
+        "altText": "Марія Попілян — сцена, червень 2026",
+        "category": "Сцена",
+        "title": "Червень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-05-03_DX4l8eiDCp6_02",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-05-03_DX4l8eiDCp6_02.jpg",
+        "altText": "Марія Попілян — покази та бренди, травень 2026",
+        "category": "Покази та бренди",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-05-03_DX4l8eiDCp6_03",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-05-03_DX4l8eiDCp6_03.jpg",
+        "altText": "Марія Попілян — покази та бренди, травень 2026",
+        "category": "Покази та бренди",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-05-03_DX4l8eiDCp6_04",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-05-03_DX4l8eiDCp6_04.jpg",
+        "altText": "Марія Попілян — покази та бренди, травень 2026",
+        "category": "Покази та бренди",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-05-03_DX4l8eiDCp6_05",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-05-03_DX4l8eiDCp6_05.jpg",
+        "altText": "Марія Попілян — покази та бренди, травень 2026",
+        "category": "Покази та бренди",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-05-03_DX4l8eiDCp6_06",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-05-03_DX4l8eiDCp6_06.jpg",
+        "altText": "Марія Попілян — покази та бренди, травень 2026",
+        "category": "Покази та бренди",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_02",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_02.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_03",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_03.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_04",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_04.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_05",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_05.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_06",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_06.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_07",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_07.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2026-04-27_DXoufoQDB6P_08",
+        "imageUrl": "/seed-images/gallery/pokazy_2026-04-27_DXoufoQDB6P_08.jpg",
+        "altText": "Марія Попілян — покази та бренди, квітень 2026",
+        "category": "Покази та бренди",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-pokazy_2025-08-28_DN6QlvcjJc3_02",
+        "imageUrl": "/seed-images/gallery/pokazy_2025-08-28_DN6QlvcjJc3_02.jpg",
+        "altText": "Марія Попілян — покази та бренди, серпень 2025",
+        "category": "Покази та бренди",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-pokazy_2025-08-28_DN6QlvcjJc3_03",
+        "imageUrl": "/seed-images/gallery/pokazy_2025-08-28_DN6QlvcjJc3_03.jpg",
+        "altText": "Марія Попілян — покази та бренди, серпень 2025",
+        "category": "Покази та бренди",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-pokazy_2025-06-23_DLQMCW1ISEp_01",
+        "imageUrl": "/seed-images/gallery/pokazy_2025-06-23_DLQMCW1ISEp_01.jpg",
+        "altText": "Марія Попілян — покази та бренди, червень 2025",
+        "category": "Покази та бренди",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-pokazy_2025-06-23_DLQMCW1ISEp_02",
+        "imageUrl": "/seed-images/gallery/pokazy_2025-06-23_DLQMCW1ISEp_02.jpg",
+        "altText": "Марія Попілян — покази та бренди, червень 2025",
+        "category": "Покази та бренди",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-pokazy_2025-06-23_DLQMCW1ISEp_03",
+        "imageUrl": "/seed-images/gallery/pokazy_2025-06-23_DLQMCW1ISEp_03.jpg",
+        "altText": "Марія Попілян — покази та бренди, червень 2025",
+        "category": "Покази та бренди",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_01.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_02.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_03.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_04.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_05.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_06.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-04-15_DXKDzQLDI0K_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-04-15_DXKDzQLDI0K_07.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2026",
+        "category": "Фотосесії",
+        "title": "Квітень 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-02-15_DUyRmOmjFDC_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-02-15_DUyRmOmjFDC_01.jpg",
+        "altText": "Марія Попілян — фотосесії, лютий 2026",
+        "category": "Фотосесії",
+        "title": "Лютий 2026"
+      },
+      {
+        "id": "g-fotosesii_2026-02-15_DUyRmOmjFDC_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2026-02-15_DUyRmOmjFDC_02.jpg",
+        "altText": "Марія Попілян — фотосесії, лютий 2026",
+        "category": "Фотосесії",
+        "title": "Лютий 2026"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_01.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_02.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_03.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_04.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_05.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-06-24_DLS8ai3oUIg_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-06-24_DLS8ai3oUIg_06.jpg",
+        "altText": "Марія Попілян — фотосесії, червень 2025",
+        "category": "Фотосесії",
+        "title": "Червень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_05.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_06.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_07.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_08",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_08.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_09",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_09.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-16_DJuYKJ3ImmR_10",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-16_DJuYKJ3ImmR_10.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-14_DJpNRCXIWYW_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-14_DJpNRCXIWYW_01.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-14_DJpNRCXIWYW_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-14_DJpNRCXIWYW_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-14_DJpNRCXIWYW_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-14_DJpNRCXIWYW_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-13_DJml59HIbb5_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-13_DJml59HIbb5_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-13_DJml59HIbb5_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-13_DJml59HIbb5_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-13_DJml59HIbb5_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-13_DJml59HIbb5_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-13_DJml59HIbb5_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-13_DJml59HIbb5_05.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_01.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_05.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_06.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_07.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_08",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_08.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_09",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_09.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-11_DJhWKEOI4Nr_10",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-11_DJhWKEOI4Nr_10.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-10_DJeyAf-IQFi_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-10_DJeyAf-IQFi_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-10_DJeyAf-IQFi_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-10_DJeyAf-IQFi_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-10_DJeyAf-IQFi_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-10_DJeyAf-IQFi_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-10_DJeyAf-IQFi_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-10_DJeyAf-IQFi_05.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-10_DJeyAf-IQFi_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-10_DJeyAf-IQFi_06.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_01.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_05.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_06.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-09_DJcKARkIuK6_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-09_DJcKARkIuK6_07.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-08_DJZgDfFoBcX_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-08_DJZgDfFoBcX_02.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-08_DJZgDfFoBcX_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-08_DJZgDfFoBcX_03.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-05-08_DJZgDfFoBcX_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-05-08_DJZgDfFoBcX_04.jpg",
+        "altText": "Марія Попілян — фотосесії, травень 2025",
+        "category": "Фотосесії",
+        "title": "Травень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-04-02_DH8z5Nro9m5_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-04-02_DH8z5Nro9m5_01.jpg",
+        "altText": "Марія Попілян — фотосесії, квітень 2025",
+        "category": "Фотосесії",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_01.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_03.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_04.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_05.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_06.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-31_DFf9HcaIH6t_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-31_DFf9HcaIH6t_07.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-30_DFdRNoiI9o__01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-30_DFdRNoiI9o__01.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-30_DFdRNoiI9o__02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-30_DFdRNoiI9o__02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-30_DFdRNoiI9o__03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-30_DFdRNoiI9o__03.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-30_DFdRNoiI9o__04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-30_DFdRNoiI9o__04.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-28_DFYQNecIYTL_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-28_DFYQNecIYTL_02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_03.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_04.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_05.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_06.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_07",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_07.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-27_DFVtKS2IBeS_08",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-27_DFVtKS2IBeS_08.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_01.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_03.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_04.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_05.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-26_DFS-7azop2l_06",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-26_DFS-7azop2l_06.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-25_DFQZ28MI9XW_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-25_DFQZ28MI9XW_01.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-25_DFQZ28MI9XW_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-25_DFQZ28MI9XW_02.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-25_DFQZ28MI9XW_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-25_DFQZ28MI9XW_03.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-25_DFQZ28MI9XW_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-25_DFQZ28MI9XW_04.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2025-01-25_DFQZ28MI9XW_05",
+        "imageUrl": "/seed-images/gallery/fotosesii_2025-01-25_DFQZ28MI9XW_05.jpg",
+        "altText": "Марія Попілян — фотосесії, січень 2025",
+        "category": "Фотосесії",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-fotosesii_2024-08-11_C-iZv7poquF_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-11_C-iZv7poquF_01.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-11_C-iZv7poquF_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-11_C-iZv7poquF_02.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-11_C-iZv7poquF_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-11_C-iZv7poquF_03.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-11_C-iZv7poquF_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-11_C-iZv7poquF_04.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-08_C-ar2D8oKQj_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-08_C-ar2D8oKQj_01.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-08_C-ar2D8oKQj_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-08_C-ar2D8oKQj_02.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-08_C-ar2D8oKQj_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-08_C-ar2D8oKQj_03.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-06_C-Vh5XGICTu_01",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-06_C-Vh5XGICTu_01.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-06_C-Vh5XGICTu_02",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-06_C-Vh5XGICTu_02.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-06_C-Vh5XGICTu_03",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-06_C-Vh5XGICTu_03.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-fotosesii_2024-08-06_C-Vh5XGICTu_04",
+        "imageUrl": "/seed-images/gallery/fotosesii_2024-08-06_C-Vh5XGICTu_04.jpg",
+        "altText": "Марія Попілян — фотосесії, серпень 2024",
+        "category": "Фотосесії",
+        "title": "Серпень 2024"
+      },
+      {
+        "id": "g-podorozhi_2026-07-28_DbWWRhLjGSB_01",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-07-28_DbWWRhLjGSB_01.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2026",
+        "category": "Подорожі",
+        "title": "Липень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-07-28_DbWWRhLjGSB_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-07-28_DbWWRhLjGSB_03.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2026",
+        "category": "Подорожі",
+        "title": "Липень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-07-28_DbWWRhLjGSB_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-07-28_DbWWRhLjGSB_04.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2026",
+        "category": "Подорожі",
+        "title": "Липень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-05-31_DZAtESMDL5a_01",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-05-31_DZAtESMDL5a_01.jpg",
+        "altText": "Марія Попілян — подорожі, травень 2026",
+        "category": "Подорожі",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-05-31_DZAtESMDL5a_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-05-31_DZAtESMDL5a_02.jpg",
+        "altText": "Марія Попілян — подорожі, травень 2026",
+        "category": "Подорожі",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-05-31_DZAtESMDL5a_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-05-31_DZAtESMDL5a_03.jpg",
+        "altText": "Марія Попілян — подорожі, травень 2026",
+        "category": "Подорожі",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-05-31_DZAtESMDL5a_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-05-31_DZAtESMDL5a_04.jpg",
+        "altText": "Марія Попілян — подорожі, травень 2026",
+        "category": "Подорожі",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-podorozhi_2026-05-31_DZAtESMDL5a_05",
+        "imageUrl": "/seed-images/gallery/podorozhi_2026-05-31_DZAtESMDL5a_05.jpg",
+        "altText": "Марія Попілян — подорожі, травень 2026",
+        "category": "Подорожі",
+        "title": "Травень 2026"
+      },
+      {
+        "id": "g-podorozhi_2025-09-24_DO_yApMDEvU_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-09-24_DO_yApMDEvU_02.jpg",
+        "altText": "Марія Попілян — подорожі, вересень 2025",
+        "category": "Подорожі",
+        "title": "Вересень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-09-24_DO_yApMDEvU_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-09-24_DO_yApMDEvU_03.jpg",
+        "altText": "Марія Попілян — подорожі, вересень 2025",
+        "category": "Подорожі",
+        "title": "Вересень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-09-24_DO_yApMDEvU_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-09-24_DO_yApMDEvU_04.jpg",
+        "altText": "Марія Попілян — подорожі, вересень 2025",
+        "category": "Подорожі",
+        "title": "Вересень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-09-24_DO_yApMDEvU_05",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-09-24_DO_yApMDEvU_05.jpg",
+        "altText": "Марія Попілян — подорожі, вересень 2025",
+        "category": "Подорожі",
+        "title": "Вересень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-09-24_DO_yApMDEvU_06",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-09-24_DO_yApMDEvU_06.jpg",
+        "altText": "Марія Попілян — подорожі, вересень 2025",
+        "category": "Подорожі",
+        "title": "Вересень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-21_DNoI4eQM6Tk_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-21_DNoI4eQM6Tk_02.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-21_DNoI4eQM6Tk_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-21_DNoI4eQM6Tk_03.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-21_DNoI4eQM6Tk_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-21_DNoI4eQM6Tk_04.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-21_DNoI4eQM6Tk_05",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-21_DNoI4eQM6Tk_05.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-07_DNEFIS-Imtw_01",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-07_DNEFIS-Imtw_01.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-07_DNEFIS-Imtw_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-07_DNEFIS-Imtw_02.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-07_DNEFIS-Imtw_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-07_DNEFIS-Imtw_03.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-08-07_DNEFIS-Imtw_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-08-07_DNEFIS-Imtw_04.jpg",
+        "altText": "Марія Попілян — подорожі, серпень 2025",
+        "category": "Подорожі",
+        "title": "Серпень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-20_DMVlD1EIyB5_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-20_DMVlD1EIyB5_02.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-20_DMVlD1EIyB5_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-20_DMVlD1EIyB5_03.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-16_DMLaTm3Iv0b_01",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-16_DMLaTm3Iv0b_01.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-16_DMLaTm3Iv0b_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-16_DMLaTm3Iv0b_02.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-16_DMLaTm3Iv0b_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-16_DMLaTm3Iv0b_03.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-16_DMLaTm3Iv0b_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-16_DMLaTm3Iv0b_04.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-07-16_DMLaTm3Iv0b_05",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-07-16_DMLaTm3Iv0b_05.jpg",
+        "altText": "Марія Попілян — подорожі, липень 2025",
+        "category": "Подорожі",
+        "title": "Липень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_01",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_01.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_02",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_02.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_03",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_03.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_04",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_04.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_05",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_05.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_06",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_06.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_07",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_07.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_08",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_08.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-podorozhi_2025-04-22_DIwRvfIoDlc_09",
+        "imageUrl": "/seed-images/gallery/podorozhi_2025-04-22_DIwRvfIoDlc_09.jpg",
+        "altText": "Марія Попілян — подорожі, квітень 2025",
+        "category": "Подорожі",
+        "title": "Квітень 2025"
+      },
+      {
+        "id": "g-osobyste_2025-01-03_DEX_P6JI47o_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2025-01-03_DEX_P6JI47o_01.jpg",
+        "altText": "Марія Попілян — особисте, січень 2025",
+        "category": "Особисте",
+        "title": "Січень 2025"
+      },
+      {
+        "id": "g-osobyste_2024-12-09_DDXbrWFoL6P_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2024-12-09_DDXbrWFoL6P_01.jpg",
+        "altText": "Марія Попілян — особисте, грудень 2024",
+        "category": "Особисте",
+        "title": "Грудень 2024"
+      },
+      {
+        "id": "g-osobyste_2024-06-12_C8Hyor1oMPn_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2024-06-12_C8Hyor1oMPn_01.jpg",
+        "altText": "Марія Попілян — особисте, червень 2024",
+        "category": "Особисте",
+        "title": "Червень 2024"
+      },
+      {
+        "id": "g-osobyste_2024-05-26_C7cB9iqIm7K_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2024-05-26_C7cB9iqIm7K_01.jpg",
+        "altText": "Марія Попілян — особисте, травень 2024",
+        "category": "Особисте",
+        "title": "Травень 2024"
+      },
+      {
+        "id": "g-osobyste_2023-09-28_CxviZXqoxe7_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2023-09-28_CxviZXqoxe7_01.jpg",
+        "altText": "Марія Попілян — особисте, вересень 2023",
+        "category": "Особисте",
+        "title": "Вересень 2023"
+      },
+      {
+        "id": "g-osobyste_2023-09-26_Cxqe4L_o3Xy_01",
+        "imageUrl": "/seed-images/gallery/osobyste_2023-09-26_Cxqe4L_o3Xy_01.jpg",
+        "altText": "Марія Попілян — особисте, вересень 2023",
+        "category": "Особисте",
+        "title": "Вересень 2023"
       }
     ]
   },
   "reels": {
-    "eyebrow": "Videography",
-    "titleLine1": "Motion &",
-    "titleAccent": "Режисура",
-    "moreLabel": "Більше в Instagram",
-    "moreUrl": "https://instagram.com",
+    "eyebrow": "Reels",
+    "titleLine1": "Рух &",
+    "titleAccent": "сцена",
+    "moreLabel": "Усі reels в Instagram",
+    "moreUrl": "https://www.instagram.com/m.popilian/reels/",
     "items": [
       {
         "id": "reel-1",
-        "imageUrl": "/seed-images/4.png",
-        "altText": "Backstage reel cover",
-        "title": "Backstage ПЗ",
-        "duration": "0:45"
+        "imageUrl": "/seed-images/ig/crowning-2026.jpg",
+        "altText": "Обкладинка reel: Красуня України 2026",
+        "title": "Красуня України 2026",
+        "duration": "Конкурс",
+        "url": "https://www.instagram.com/m.popilian/reel/DV8zpb8jApc/"
       },
       {
         "id": "reel-2",
-        "imageUrl": "/seed-images/5.png",
-        "altText": "Runway highlights reel cover",
-        "title": "Runway Highlights",
-        "duration": "1:20"
+        "imageUrl": "/seed-images/ig/mavka.jpg",
+        "altText": "Обкладинка reel: Мавка",
+        "title": "Мавка",
+        "duration": "Сцена",
+        "url": "https://www.instagram.com/m.popilian/reel/DZuxUbTsq4D/"
       },
       {
         "id": "reel-3",
-        "imageUrl": "/seed-images/6.png",
-        "altText": "Vogue cover shoot reel cover",
-        "title": "Vogue Cover Shoot",
-        "duration": "0:58"
+        "imageUrl": "/seed-images/ig/budapest-roses.jpg",
+        "altText": "Обкладинка reel: Казковий Будапешт",
+        "title": "Казковий Будапешт",
+        "duration": "Подіум",
+        "url": "https://www.instagram.com/m.popilian/reel/DO6Rh8nDKWY/"
+      },
+      {
+        "id": "reel-4",
+        "imageUrl": "/seed-images/ig/kochut-performance.jpg",
+        "altText": "Обкладинка reel: Перформанс Kochut",
+        "title": "Перформанс Kochut",
+        "duration": "Хореографія",
+        "url": "https://www.instagram.com/m.popilian/reel/DWZg9QUjD3L/"
+      },
+      {
+        "id": "reel-5",
+        "imageUrl": "/seed-images/ig/lviv-runway.jpg",
+        "altText": "Обкладинка reel: Фінал показу у Львові",
+        "title": "Фінал показу у Львові",
+        "duration": "Подіум",
+        "url": "https://www.instagram.com/m.popilian/reel/DLNgCAPIjoC/"
+      },
+      {
+        "id": "reel-6",
+        "imageUrl": "/seed-images/ig/by-vel-runway.jpg",
+        "altText": "Обкладинка reel: by_vel",
+        "title": "by_vel",
+        "duration": "Подіум",
+        "url": "https://www.instagram.com/m.popilian/reel/DB1iOfDI8EB/"
       }
     ]
   },
   "press": {
-    "watermark": "PUBLICATIONS",
-    "eyebrow": "Визнання",
-    "titleLine1": "Преса &",
-    "titleAccent": "Публікації",
-    "items": [
-      {
-        "year": "2026",
-        "magazine": "VOGUE UKRAINE",
-        "title": "Нове обличчя української моди: Шлях до корони",
-        "category": "Cover Story",
-        "url": "https://vogue.ua/"
-      },
-      {
-        "year": "2025",
-        "magazine": "L'OFFICIEL",
-        "title": "Мистецтво позування та режисура дефіле",
-        "category": "Interview",
-        "url": "https://lofficiel.ua/"
-      },
-      {
-        "year": "2025",
-        "magazine": "HARPER'S BAZAAR",
-        "title": "10 найвпливовіших моделей року за версією редакції",
-        "category": "Editorial",
-        "url": "https://harpersbazaar.com.ua/"
-      },
-      {
-        "year": "2024",
-        "magazine": "ELLE",
-        "title": "Від бекстейджу до подіуму. Історія Марії Попілян",
-        "category": "Feature",
-        "url": "https://elle.ua/"
-      }
-    ]
+    "watermark": "Diary",
+    "eyebrow": "З Instagram",
+    "titleLine1": "Щоденник",
+    "titleAccent": "Марії",
+    "items": []
   },
   "journal": {
-    "titlePrefix": "The",
-    "titleAccent": "Journal",
-    "eyebrow": "За лаштунками та Інсайди",
+    "titlePrefix": "Останні",
+    "titleAccent": "історії",
+    "eyebrow": "Пости",
     "items": [
       {
         "id": "journal-1",
-        "imageUrl": "/seed-images/4.png",
-        "altText": "Article cover about posing",
-        "date": "12 Березня, 2026",
-        "title": "Секрети ідеального позування: як знайти свої ракурси",
-        "href": "#",
-        "ctaLabel": "Читати статтю"
+        "imageUrl": "/seed-images/ig/graduation-stage.jpg",
+        "altText": "4 роки, сотні годин у залі — і диплом хореографа з відзнакою",
+        "date": "16 червня 2026",
+        "title": "4 роки, сотні годин у залі — і диплом хореографа з відзнакою",
+        "href": "https://www.instagram.com/m.popilian/p/DZp3Ng0jLSR/",
+        "ctaLabel": "Читати в Instagram"
       },
       {
         "id": "journal-2",
-        "imageUrl": "/seed-images/6.png",
-        "altText": "Article cover about beauty contest preparation",
-        "date": "05 Березня, 2026",
-        "title": "Щоденник підготовки до конкурсу Красуня України",
-        "href": "#",
-        "ctaLabel": "Читати статтю"
+        "imageUrl": "/seed-images/ig/by-iren-lilac.jpg",
+        "altText": "Сукня від української дизайнерки by._iren",
+        "date": "3 травня 2026",
+        "title": "Сукня від української дизайнерки by._iren",
+        "href": "https://www.instagram.com/m.popilian/p/DX4l8eiDCp6/",
+        "ctaLabel": "Читати в Instagram"
       },
       {
         "id": "journal-3",
-        "imageUrl": "/seed-images/3.png",
-        "altText": "Article cover about fashion week backstage",
-        "date": "28 Лютого, 2026",
-        "title": "За лаштунками Ukrainian Fashion Week 2026",
-        "href": "#",
-        "ctaLabel": "Читати статтю"
+        "imageUrl": "/seed-images/ig/kochut-performance.jpg",
+        "altText": "Хореографічний перформанс разом із Kochut Jewelry",
+        "date": "27 березня 2026",
+        "title": "Хореографічний перформанс разом із Kochut Jewelry",
+        "href": "https://www.instagram.com/m.popilian/reel/DWZg9QUjD3L/",
+        "ctaLabel": "Читати в Instagram"
+      },
+      {
+        "id": "journal-4",
+        "imageUrl": "/seed-images/ig/crowning-2026.jpg",
+        "altText": "Офіційно: Красуня України 2026",
+        "date": "16 березня 2026",
+        "title": "Офіційно: Красуня України 2026",
+        "href": "https://www.instagram.com/m.popilian/reel/DV8zpb8jApc/",
+        "ctaLabel": "Читати в Instagram"
+      },
+      {
+        "id": "journal-5",
+        "imageUrl": "/seed-images/ig/budapest-roses.jpg",
+        "altText": "Вечірній Будапешт і казковий образ від Bles Team",
+        "date": "22 вересня 2025",
+        "title": "Вечірній Будапешт і казковий образ від Bles Team",
+        "href": "https://www.instagram.com/m.popilian/reel/DO6Rh8nDKWY/",
+        "ctaLabel": "Читати в Instagram"
+      },
+      {
+        "id": "journal-6",
+        "imageUrl": "/seed-images/ig/paris-louvre.jpg",
+        "altText": "Париж — місто мрії: Paris Fashion Days",
+        "date": "17 березня 2025",
+        "title": "Париж — місто мрії: Paris Fashion Days",
+        "href": "https://www.instagram.com/m.popilian/reel/DHT1RnSomVo/",
+        "ctaLabel": "Читати в Instagram"
       }
     ]
   },
   "contact": {
-    "watermark": "COLLABORATE",
+    "watermark": "Contact",
     "eyebrow": "Співпраця",
-    "titlePrefix": "Let's",
-    "titleAccent": "Work",
+    "titlePrefix": "Давайте",
+    "titleAccent": "працювати разом",
     "methods": [
       {
-        "label": "Management",
-        "value": "maria@example.com",
-        "href": "mailto:maria@example.com"
+        "label": "Instagram",
+        "value": "@m.popilian",
+        "href": "https://www.instagram.com/m.popilian/"
       },
       {
-        "label": "Direct",
-        "value": "+380 99 123 45 67",
-        "href": "tel:+380991234567"
-      },
-      {
-        "label": "Socials",
-        "value": "Instagram ↗",
-        "href": "https://instagram.com"
+        "label": "Хореографія",
+        "value": "@4choreography",
+        "href": "https://www.instagram.com/4choreography/"
       }
     ],
     "form": {
       "namePlaceholder": "Ваше ім'я",
-      "emailPlaceholder": "Email",
-      "detailsPlaceholder": "Деталі проєкту...",
-      "submitLabel": "Надіслати Запит"
+      "emailPlaceholder": "Email або телефон",
+      "detailsPlaceholder": "Розкажіть про проєкт: формат, дата, місто",
+      "submitLabel": "Надіслати запит"
     },
-    "footerLeft": "© 2026 MARIA POPILIAN",
-    "footerRight": "Premium Portfolio"
+    "footerLeft": "© 2026 Maria Popilian",
+    "footerRight": "Модель · Хореограф · Красуня України 2026"
   }
 }
