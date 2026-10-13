@@ -10,7 +10,7 @@
   to = "/404"
   status = 404
 
-# Сторінки пререндерені (scripts/prerender.mjs): /about → about/index.html — Netlify віддає їх сам.
+# Сторінки пререндерені (scripts/prerender.mjs): /about → about.html — Netlify віддає їх сам (без слеша в кінці).
 # Адмінка — SPA без пререндеру (на Netlify без сервера вона лише покаже форму входу)
 [[redirects]]
   from = "/admin/*"

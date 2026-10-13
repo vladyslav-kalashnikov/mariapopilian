@@ -205,7 +205,8 @@ function render(page, { noindex = false } = {}) {
 
 for (const page of pages) {
   const html = render(page);
-  const file = page.path === "/" ? path.join(dist, "index.html") : path.join(dist, page.path.slice(1), "index.html");
+  // /about → about.html: Netlify віддає його за адресою /about без переадресації на /about/
+  const file = page.path === "/" ? path.join(dist, "index.html") : path.join(dist, `${page.path.slice(1)}.html`);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, html);
 }

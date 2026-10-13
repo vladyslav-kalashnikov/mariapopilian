@@ -407,15 +407,15 @@ function serveFrontend(res, requestedPathname) {
     return;
   }
 
-  // Пререндерені сторінки (scripts/prerender.mjs): /about → dist/about/index.html
-  const pagePath = assetPath && path.join(assetPath, "index.html");
+  // Пререндерені сторінки (scripts/prerender.mjs): /about → dist/about.html
+  const pagePath = assetPath && requestedPathname !== "/" && `${assetPath.replace(/[\\/]+$/, "")}.html`;
   if (pagePath && fs.existsSync(pagePath)) {
     streamFile(res, pagePath, "no-store");
     return;
   }
 
-  // Адмінка — звичайна SPA без пререндеру
-  if (requestedPathname === "/admin" || requestedPathname.startsWith("/admin/")) {
+  // Головна (пререндерена в dist/index.html) і адмінка (звичайна SPA без пререндеру)
+  if (requestedPathname === "/" || requestedPathname === "/admin" || requestedPathname.startsWith("/admin/")) {
     if (fs.existsSync(indexPath)) {
       streamFile(res, indexPath, "no-store");
       return;
