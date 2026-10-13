@@ -1,9 +1,10 @@
-import { useEffect, type MouseEvent } from "react";
+import { type MouseEvent } from "react";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { useSiteContent } from "@/app/content/SiteContentProvider";
 import { valuePath } from "@/app/lib/routes";
+import { useSeo } from "@/app/lib/useSeo";
 import { easeLuxe, Eyebrow, Photo, Reveal } from "./primitives";
 
 /** Окрема сторінка цінності: /values/<slug> */
@@ -13,9 +14,11 @@ export function ValuePage({ slug, onNavigate }: { slug: string; onNavigate: (pag
   const index = values.findIndex((value) => value.slug === slug);
   const value = values[index];
 
-  useEffect(() => {
-    document.title = value ? `${value.title} — Марія Попілян` : "Сторінку не знайдено — Марія Попілян";
-  }, [value]);
+  useSeo(
+    value
+      ? { title: `${value.title} — Марія Попілян`, description: value.lead || value.description, path: valuePath(slug), image: value.imageUrl }
+      : { title: "Сторінку не знайдено — Марія Попілян", description: "Такої сторінки немає.", path: valuePath(slug), noindex: true },
+  );
 
   const go = (event: MouseEvent, path: string) => {
     event.preventDefault();

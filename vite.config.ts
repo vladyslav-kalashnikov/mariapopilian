@@ -20,6 +20,10 @@ export default defineConfig({
       },
     },
   ],
+  // Адреса сайту для canonical/OG: SITE_URL (вручну) або URL (Netlify підставляє сам)
+  define: {
+    'import.meta.env.VITE_SITE_URL': JSON.stringify(process.env.SITE_URL || process.env.URL || ''),
+  },
   resolve: {
     alias: {
       // Alias @ to the src directory

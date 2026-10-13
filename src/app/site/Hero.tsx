@@ -29,6 +29,8 @@ export function Hero({ onNavigate }: { onNavigate: (page: string) => void }) {
           </motion.p>
 
           <h1 className="display mt-8 text-ink" style={{ fontSize: "clamp(4.2rem, 10.5vw, 10.5rem)" }}>
+            {/* Кирилична форма імені — для пошуку «Марія Попілян» і скрінрідерів */}
+            <span className="sr-only">Марія Попілян — </span>
             <motion.span {...fadeUp(0.4)} className="block">
               {hero.firstName}
             </motion.span>

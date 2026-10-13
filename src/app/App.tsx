@@ -11,19 +11,41 @@ import { PortfolioGrid, Reels } from "./site/PortfolioSections";
 import { ContactPage, Journal, PressList, SiteFooter } from "./site/MediaContact";
 import { PageHeader } from "./site/primitives";
 import { hasMediaContent } from "./site/navLinks";
-import { isAdminPath, normalizePageId, pageToPath, pathnameToPage, valueSlugFromPath, type PublicPageId } from "./lib/routes";
+import { isAdminPath, isKnownPath, normalizePageId, pageToPath, pathnameToPage, valueSlugFromPath, type PublicPageId } from "./lib/routes";
+import { useSeo } from "./lib/useSeo";
+import seo from "@/content/seo.json";
 import { ValuePage } from "./site/ValuePage";
 
 // Адмінка важка (~1000 рядків редактора) — окремий чанк, відвідувачам сайту не потрібна
 const AdminPage = lazy(() => import("./admin/AdminPage").then((module) => ({ default: module.AdminPage })));
 
-const pageTitles: Record<PublicPageId, string> = {
-    home: "Марія Попілян — модель, хореограф, Красуня України 2026",
-    about: "Про Марію — Марія Попілян",
-    portfolio: "Портфоліо — Марія Попілян",
-    press: "Щоденник — Марія Попілян",
-    contact: "Контакти та співпраця — Марія Попілян",
-};
+function NotFound({ onNavigate }: { onNavigate: (page: string) => void }) {
+    useSeo({ ...seo.pages.notFound, path: "/404", noindex: true });
+    return (
+        <section className="mx-auto flex min-h-[70svh] max-w-[1440px] flex-col justify-center px-5 pb-24 pt-36 md:px-10">
+            <p className="eyebrow text-gold">404</p>
+            <h1 className="display mt-6 text-ink" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>
+                Сторінку <em className="italic text-gold">не знайдено</em>
+            </h1>
+            <a
+                href="/"
+                onClick={(event) => {
+                    event.preventDefault();
+                    onNavigate("home");
+                }}
+                className="eyebrow mt-12 inline-flex w-fit rounded-full bg-gold px-8 py-5 text-night transition-colors duration-300 hover:bg-gold-soft"
+            >
+                На головну
+            </a>
+        </section>
+    );
+}
+
+/** SEO статичних сторінок (заголовок, опис, canonical, OG) */
+function PageSeo({ page }: { page: PublicPageId }) {
+    useSeo({ ...seo.pages[page], path: pageToPath(page) });
+    return null;
+}
 
 function PublicSiteShell({
     pathname,
@@ -36,15 +58,14 @@ function PublicSiteShell({
 }) {
     const { content } = useSiteContent();
 
-    useEffect(() => {
-        if (!valueSlugFromPath(pathname)) document.title = pageTitles[currentPage];
-    }, [currentPage, pathname]);
-
     const valueSlug = valueSlugFromPath(pathname);
 
     const renderPage = () => {
         if (valueSlug) {
             return <ValuePage slug={valueSlug} onNavigate={setCurrentPage} />;
+        }
+        if (!isKnownPath(pathname)) {
+            return <NotFound onNavigate={setCurrentPage} />;
         }
         switch (currentPage) {
             case "about":
@@ -122,6 +143,7 @@ function PublicSiteShell({
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.45, ease: "easeInOut" }}
                     >
+                        {!valueSlug && isKnownPath(pathname) && <PageSeo page={currentPage} />}
                         {renderPage()}
                     </motion.main>
                 </AnimatePresence>

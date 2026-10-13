@@ -27,7 +27,8 @@ export function normalizePageId(page: string): PublicPageId {
 export function pathnameToPage(pathname: string): PublicPageId {
   // Сторінки цінностей — частина розділу «Про Марію»
   if (valueSlugFromPath(pathname)) return "about";
-  return pageByPath[pathname] ?? "home";
+  const clean = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  return pageByPath[clean] ?? "home";
 }
 
 /** /values/<slug> → slug (сторінка окремої цінності) */
@@ -38,6 +39,12 @@ export function valueSlugFromPath(pathname: string) {
 
 export function valuePath(slug: string) {
   return `/values/${slug}`;
+}
+
+/** Чи існує така сторінка (інакше — 404) */
+export function isKnownPath(pathname: string) {
+  const clean = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  return clean in pageByPath || valueSlugFromPath(clean) !== null;
 }
 
 export function isAdminPath(pathname: string) {

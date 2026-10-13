@@ -85,6 +85,8 @@ const mimeTypes = {
   ".mjs": "text/javascript; charset=utf-8",
   ".png": "image/png",
   ".svg": "image/svg+xml",
+  ".txt": "text/plain; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
   ".webp": "image/webp",
 };
 
@@ -402,6 +404,29 @@ function serveFrontend(res, requestedPathname) {
 
   if (assetPath && fs.existsSync(assetPath) && fs.statSync(assetPath).isFile()) {
     streamFile(res, assetPath, "public, max-age=3600");
+    return;
+  }
+
+  // Пререндерені сторінки (scripts/prerender.mjs): /about → dist/about/index.html
+  const pagePath = assetPath && path.join(assetPath, "index.html");
+  if (pagePath && fs.existsSync(pagePath)) {
+    streamFile(res, pagePath, "no-store");
+    return;
+  }
+
+  // Адмінка — звичайна SPA без пререндеру
+  if (requestedPathname === "/admin" || requestedPathname.startsWith("/admin/")) {
+    if (fs.existsSync(indexPath)) {
+      streamFile(res, indexPath, "no-store");
+      return;
+    }
+  }
+
+  // Невідома адреса — справжній 404 (SPA покаже «Сторінку не знайдено»), а не 200 для пошуковиків
+  const notFoundPath = path.join(distDir, "404.html");
+  if (fs.existsSync(notFoundPath)) {
+    res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" });
+    fs.createReadStream(notFoundPath).pipe(res);
     return;
   }
 
